@@ -6,20 +6,22 @@
     <title>@ViewData["Title"] - DC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/e5a7e3c704.js" crossorigin="anonymous"></script>
     <style>
         .container {
-            padding-left:25px!important;
-            margin-left:0px;
+            padding-left: 25px !important;
+            margin-left: 0px;
         }
+
         .wrapper {
             display: flex;
             align-items: stretch;
-            
         }
 
         #sidebar {
-            min-width:250px;
+            min-width: 250px;
             min-height: 700px;
+            padding-top: 10px;
         }
 
 
@@ -35,7 +37,6 @@
             }
 
             #sidebar ul.components {
-                border-bottom: 1px solid #47748b;
             }
 
             #sidebar ul p {
@@ -44,17 +45,18 @@
 
 
 
-                #sidebar ul li a {
-                    padding: 10px;
-                    font-size: 1.1em;
-                    display: block;
-                    color: #fff;
-                    padding-left: 40px !important;
-                }
+            #sidebar ul li a {
+                padding: 10px;
+                font-size: 1.1em;
+                display: block;
+                color: #fff;
+                padding-left: 40px !important;
+            }
 
                 #sidebar ul li a:hover {
                     color: #fff;
                     background: #323d4b;
+                    text-decoration: none;
                 }
 
             #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -65,7 +67,7 @@
         ul ul a {
             font-size: 0.9em !important;
             padding-left: 30px !important;
-            background: #fff;
+            background: #3e4b5a;
         }
     </style>
 
@@ -100,14 +102,14 @@
 
                 <ul class="list-unstyled components">
                     <li class="active">
-                        <a href="#">Dashboard</a>
+                        <a href="/Software/Dashboard"><i class="fas fa-home"></i>&nbsp;Dashboard</a>
                         
                     </li>
                     <li>
-                        <a href="/Software/Leads">Leads</a>
+                        <a href="/Software/Leads"><i class="fas fa-users"></i>&nbsp;Leads</a>
                     </li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-newspaper"></i>&nbsp;Reports</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
                                 <a href="#">Page 1</a>
@@ -121,10 +123,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Settings</a>
+                        <a href="#"><i class="fas fa-cog"></i>&nbsp;Settings</a>
                     </li>
                     <li>
-                        <a href="#">Logout</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
                     </li>
                 </ul>
 
@@ -155,4 +157,14 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
+<script>
+    $("li").click(
+        function (event) {
+            $('li').removeClass('active');
+            $(this).addClass('active');
+            event.preventDefault()
+        }
+    );
+</script>
