@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TtI3Cu/Ql6AKR9y1oK4bDsni/Ne3taCjxtFKCo/M2LTvZtMd/CDspoh6uthzQ16udKXNBE5+KGyEvdi1S02fZQ==",
+  "success": true,
+  "projectFilePath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Api/Sohi.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/gurmindersingh/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/gurmindersingh/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/gurmindersingh/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/gurmindersingh/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/gurmindersingh/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/gurmindersingh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
