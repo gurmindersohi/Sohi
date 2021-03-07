@@ -1,0 +1,7 @@
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.AssemblyInfoInputs.cache
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.AssemblyInfo.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.csproj.CoreCompileInputs.cache
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.MvcApplicationPartsAssemblyInfo.cache
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.RazorAssemblyInfo.cache
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Sohi.Web.Old.RazorAssemblyInfo.cs
