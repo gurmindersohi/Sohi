@@ -8,21 +8,17 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/gurmindersingh/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/gurmindersingh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web.csproj",
-      "projectName": "Sohi.Web",
-      "projectPath": "/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web.csproj",
+      "projectUniqueName": "/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web.Old.csproj",
+      "projectName": "Sohi.Web.Old",
+      "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web.Old.csproj",
       "packagesPath": "/Users/gurmindersingh/.nuget/packages/",
-      "outputPath": "/Users/gurmindersingh/Documents/Sohi/Sohi.Web/obj/",
+      "outputPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "/Users/gurmindersingh/.config/NuGet/NuGet.Config"
       ],

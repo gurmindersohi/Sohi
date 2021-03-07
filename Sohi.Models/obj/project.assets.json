@@ -8,21 +8,17 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/gurmindersingh/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/gurmindersingh/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gurmindersingh/Documents/Sohi/Sohi.Models/Sohi.Models.csproj",
+      "projectUniqueName": "/Users/gurmindersingh/Projects/Sohi/Sohi.Models/Sohi.Models.csproj",
       "projectName": "Sohi.Models",
-      "projectPath": "/Users/gurmindersingh/Documents/Sohi/Sohi.Models/Sohi.Models.csproj",
+      "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Models/Sohi.Models.csproj",
       "packagesPath": "/Users/gurmindersingh/.nuget/packages/",
-      "outputPath": "/Users/gurmindersingh/Documents/Sohi/Sohi.Models/obj/",
+      "outputPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Models/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "/Users/gurmindersingh/.config/NuGet/NuGet.Config"
       ],
