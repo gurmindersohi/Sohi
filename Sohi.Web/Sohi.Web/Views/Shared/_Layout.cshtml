@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+    <style>
+        .wrapper {
+            display: flex;
+            align-items: stretch;
+            padding: 0;
+        }
+
+        #sidebarMenu ul p {
+            color: #fff;
+        }
+
+
+
+        #sidebarMenu ul li a {
+            font-size: 1.1em;
+            display: block;
+            color: #fff;
+        }
+
+            #sidebarMenu ul li a:hover {
+                color: #fff;
+                background: #323d4b;
+                text-decoration: none;
+            }
+
+        #sidebarMenu ul li.active > a, a[aria-expanded="true"] {
+            color: #fff;
+            background: #394452;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #394452!important;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="padding-left:40px!important" href="#">DC</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="account" asp-action="login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="account" asp-action="register">Register</a>
+                            </li>
+
+
+
+                            @*<li class="nav-item">
+            <a class="nav-link" href="#">Gurminder Singh</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+        </li>*@
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row mt-5" style="height: calc(100vh - 0px);">
+                <div class="col">
+                    <div class="container-fluid">
+                        <main role="main" class="pb-3">
+                            @RenderBody()
+                        </main>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        @*<footer class="footer mt-auto py-3 bg-light" style="background-color:#313e49!important">
+            <div class="container">
+                <span class="text-muted">Gurminder Singh Inc 2021 </span>
+            </div>
+        </footer>*@
+
+        @if (IsSectionDefined("Scripts"))
+        {
+            @RenderSection("Scripts", required: true);
+        }
+    </div>
+
+    <script>$("li").click(
+            function (event) {
+                $('li').removeClass('active');
+                $(this).addClass('active');
+      
+            }
+        );</script>
+</body>
+
+</html>
+

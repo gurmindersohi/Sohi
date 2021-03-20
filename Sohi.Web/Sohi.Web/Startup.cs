@@ -9,6 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sohi.Web.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Sohi.Web.Models.Leads;
 
 namespace Sohi.Web
 {
@@ -25,25 +29,43 @@ namespace Sohi.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("SohiDbConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 10;
+                options.Password.RequiredUniqueChars = 3;
+            }).AddEntityFrameworkStores<AppDbContext>();
+
+
+            services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
+            services.AddScoped<ILeadsRepository, MockLeadsRepository>();
+            //services.AddScoped<IUserRepository, SQLUserRepository>();
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else {
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
 
-            app.UseDefaultFiles();
+
             app.UseStaticFiles();
+            app.UseAuthentication();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
+            //app.UseMvcWithDefaultRoute();
+
+            app.UseMvc(routes => {
+                routes.MapRoute("default", "{controller=Dashboard}/{action=Index}/{id?}");
             });
 
-            
+
         }
     }
 }
