@@ -81,3 +81,9 @@
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Leads.cshtml.g.cs
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Dashboard.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/SignIn.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Signup.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Dashboard.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Leads.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Master.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/obj/Debug/net5.0/Razor/Pages/Software/Marketing.cshtml.g.cs
