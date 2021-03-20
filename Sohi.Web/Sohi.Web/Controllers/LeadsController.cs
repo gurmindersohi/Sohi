@@ -21,7 +21,7 @@ namespace Sohi.Web.Controllers
 
         public ViewResult Index()
         {
-            throw new Exception("Error in Leads View");
+            //throw new Exception("Error in Leads View");
             var model =  _leadsRepository.GetAllLeads("1");
             return View(model);
         }

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<User> signInManager
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -49,20 +51,37 @@
                     </button>
                     <div class="" id="navbarNav">
                         <ul class="navbar-nav me-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="account" asp-action="register">Register</a>
-                            </li>
-
-
-
-                            @*<li class="nav-item">
-                                    <a class="nav-link" href="#">Gurminder Singh</a>
+                            @if (signInManager.IsSignedIn(User))
+                            {
+                                <li class="nav-item">
+                                    <form method="post" asp-action="logout" asp-controller="account">
+                                        <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                                            Logout @User.Identity.Name
+                                        </button>
+                                    </form>
                                 </li>
 
+
+                            }
+                            else
+                            {
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Logout</a>
-                                </li>*@
+                                    <a class="nav-link" asp-action="register" asp-controller="account" >Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-action="login" asp-controller="account" >Login</a>
+                                </li>
+
+                            }
+
+                            @*<li class="nav-item">
+            <a class="nav-link" href="#">Gurminder Singh</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+        </li>*@
 
                         </ul>
                     </div>
@@ -73,7 +92,7 @@
         <div class="container-fluid">
             <div class="row" style="height: calc(100vh - 0px);">
                 <div class="wrapper">
-                    <nav id="sidebarMenu" class="col-md-3 col-md-2 d-md-block bg-dark sidebar collapse" style="background-color: #394452!important; padding:0!important;">
+                    <nav id="sidebarMenu" class="col-md-2 d-md-block bg-dark sidebar collapse" style="background-color: #394452!important; padding:0!important;">
                         <div class="position-sticky pt-3">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -96,7 +115,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" asp-controller="Reports" asp-action="Index">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                                         Reports
                                     </a>
