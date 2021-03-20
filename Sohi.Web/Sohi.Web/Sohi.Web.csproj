@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\User\**" />
+    <Content Remove="Views\User\**" />
+    <EmbeddedResource Remove="Views\User\**" />
+    <None Remove="Views\User\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\js\" />
@@ -15,7 +22,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\" />
-    <Folder Include="Views\User\" />
     <Folder Include="Models\Leads\" />
     <Folder Include="Views\Leads\" />
     <Folder Include="Views\Marketing\" />

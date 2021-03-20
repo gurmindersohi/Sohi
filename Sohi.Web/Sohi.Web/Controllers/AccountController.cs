@@ -4,17 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Sohi.Web.Models;
 using Sohi.Web.ViewModels;
 
 namespace Sohi.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<User> userManager;
+        private readonly SignInManager<User> signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<User> userManager,
+            SignInManager<User> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -33,7 +34,7 @@ namespace Sohi.Web.Controllers
             if (ModelState.IsValid)
             {
                 // Copy data from RegisterViewModel to IdentityUser
-                var user = new IdentityUser
+                var user = new User
                 {
                     UserName = model.Email,
                     Email = model.Email
