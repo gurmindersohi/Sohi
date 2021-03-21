@@ -170,3 +170,4 @@ C:/Users/gurmi/source/repos/gurmindersingh751/Sohi/Sohi.Web/Sohi.Web/obj/Debug/n
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Administration/CreateRole.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Administration/ListRoles.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Administration/EditRole.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Administration/EditUsersInRole.cshtml.g.cs

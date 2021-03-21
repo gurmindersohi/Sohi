@@ -1,32 +1,28 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Administration/EditRole.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/EditRoleViewModel.cs" Line="21" Column="2" IsPinned="True" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AdministrationController.cs" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/CreateRole.cshtml" />
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/CreateRoleViewModel.cs" />
-      <File FileName="Sohi.Web/Sohi.Web/Program.cs" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/ListRoles.cshtml" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditRole.cshtml" Line="11" Column="33" />
+      <File FileName="Sohi.Web/Sohi.Web/ViewModels/EditRoleViewModel.cs" Line="19" Column="31" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/AdministrationController.cs" Line="18" Column="28" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditRole.cshtml" Line="51" Column="104" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditUsersInRole.cshtml" Line="13" Column="51" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="158" Column="71" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Sohi" expanded="True">
-            <Node name="Sohi.Web" expanded="True" selected="True">
+            <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
                 <Node name="Controllers" expanded="True" />
-                <Node name="Migrations" expanded="True" />
-                <Node name="Models" expanded="True" />
-                <Node name="Properties" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Leads" expanded="True" />
+                </Node>
                 <Node name="ViewModels" expanded="True" />
                 <Node name="Views" expanded="True">
                   <Node name="Administration" expanded="True" />
-                  <Node name="Shared" expanded="True" />
-                </Node>
-                <Node name="wwwroot" expanded="True">
-                  <Node name="lib" expanded="True" />
+                  <Node name="Shared" expanded="True">
+                    <Node name="Portal.cshtml" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
