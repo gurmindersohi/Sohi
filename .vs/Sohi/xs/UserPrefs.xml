@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Controllers/AccountController.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/EditRoleViewModel.cs" Line="19" Column="31" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AdministrationController.cs" Line="18" Column="28" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditRole.cshtml" Line="51" Column="104" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditUsersInRole.cshtml" Line="13" Column="51" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="158" Column="71" />
+      <File FileName="Sohi.Web/Sohi.Web/Startup.cs" Line="55" Column="63" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/LeadsController.cs" Line="30" Column="59" />
+      <File FileName="Sohi.Web/Sohi.Web/Security/DataProtectionPurposeStrings.cs" Line="6" Column="68" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/Leads.cs" Line="9" Column="22" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Leads/Index.cshtml" Line="20" Column="17" />
+      <File FileName="Sohi.Web/Sohi.Web/ViewModels/ChangePasswordViewModel.cs" Line="25" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Account/ChangePassword.cshtml" Line="20" Column="15" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Account/ChangePasswordConfirmation.cshtml" Line="3" Column="6" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="25" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,24 +17,22 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="AccountController.cs" selected="True" />
+                </Node>
                 <Node name="Models" expanded="True">
                   <Node name="Leads" expanded="True" />
                 </Node>
+                <Node name="Security" expanded="True" />
                 <Node name="ViewModels" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Administration" expanded="True" />
-                  <Node name="Shared" expanded="True">
-                    <Node name="Portal.cshtml" selected="True" />
-                  </Node>
+                  <Node name="Account" expanded="True" />
+                  <Node name="Leads" expanded="True" />
                 </Node>
               </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

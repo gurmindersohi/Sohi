@@ -37,7 +37,8 @@ namespace Sohi.Web
             {
                 options.Password.RequiredLength = 10;
                 options.Password.RequiredUniqueChars = 3;
-            }).AddEntityFrameworkStores<AppDbContext>();
+                options.SignIn.RequireConfirmedEmail = true;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
             services.AddMvc(config => {
                 var policy = new AuthorizationPolicyBuilder()
@@ -49,6 +50,8 @@ namespace Sohi.Web
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
             services.AddScoped<ILeadsRepository, MockLeadsRepository>();
             //services.AddScoped<IUserRepository, SQLUserRepository>();
+
+            services.AddSingleton<DataProtectionPurposeStrings>();
 
         }
 
