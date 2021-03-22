@@ -6,7 +6,7 @@ namespace Sohi.Web.Models.Leads
 {
     public class Leads : ModelBase
     {
-        public Guid? Id { get; set; }
+        public Guid? LeadId { get; set; }
 
         [NotMapped]
         public string EncryptedId { get; set; }

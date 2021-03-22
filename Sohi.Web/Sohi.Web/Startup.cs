@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Sohi.Web.Models.Leads;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Sohi.Web.Security;
 
 namespace Sohi.Web
 {

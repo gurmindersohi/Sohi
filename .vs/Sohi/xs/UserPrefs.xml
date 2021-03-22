@@ -1,15 +1,11 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Controllers/AccountController.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Startup.cs" Line="55" Column="63" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/LeadsController.cs" Line="30" Column="59" />
-      <File FileName="Sohi.Web/Sohi.Web/Security/DataProtectionPurposeStrings.cs" Line="6" Column="68" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/Leads.cs" Line="9" Column="22" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Leads/Index.cshtml" Line="20" Column="17" />
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/ChangePasswordViewModel.cs" Line="25" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Account/ChangePassword.cshtml" Line="20" Column="15" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Account/ChangePasswordConfirmation.cshtml" Line="3" Column="6" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="25" Column="19" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/EmailController.cs" Line="22" Column="25" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/AppDbContext.cs" Line="26" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/MockLeadsRepository.cs" Line="18" Column="30" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/Leads.cs" Line="10" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,12 +19,7 @@
                 <Node name="Models" expanded="True">
                   <Node name="Leads" expanded="True" />
                 </Node>
-                <Node name="Security" expanded="True" />
-                <Node name="ViewModels" expanded="True" />
-                <Node name="Views" expanded="True">
-                  <Node name="Account" expanded="True" />
-                  <Node name="Leads" expanded="True" />
-                </Node>
+                <Node name="Views" expanded="True" />
               </Node>
             </Node>
           </Node>
