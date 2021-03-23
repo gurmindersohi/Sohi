@@ -1,27 +1,28 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/EditRoleViewModel.cs" Line="19" Column="31" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AdministrationController.cs" Line="18" Column="28" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditRole.cshtml" Line="51" Column="104" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Administration/EditUsersInRole.cshtml" Line="13" Column="51" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="147" Column="56" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="37" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Index.cshtml" Line="50" Column="146" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Sohi" expanded="True" selected="True">
+          <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="MarketingController.cs" selected="True" />
+                </Node>
                 <Node name="Models" expanded="True">
+                  <Node name="Emails" expanded="True" />
                   <Node name="Leads" expanded="True" />
                 </Node>
-                <Node name="ViewModels" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Administration" expanded="True" />
+                  <Node name="Leads" expanded="True" />
+                  <Node name="Marketing" expanded="True" />
                   <Node name="Shared" expanded="True" />
                 </Node>
+                <Node name="wwwroot" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -36,7 +37,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" line="29" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
