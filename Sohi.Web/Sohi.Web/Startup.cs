@@ -16,6 +16,7 @@ using Sohi.Web.Models.Leads;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Sohi.Web.Security;
+using Sohi.Web.Models.Emails;
 
 namespace Sohi.Web
 {
@@ -50,6 +51,7 @@ namespace Sohi.Web
 
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
             services.AddScoped<ILeadsRepository, MockLeadsRepository>();
+            services.AddScoped<IEmailsRepository, EmailsRepository>();
             //services.AddScoped<IUserRepository, SQLUserRepository>();
 
             services.AddSingleton<DataProtectionPurposeStrings>();

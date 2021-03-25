@@ -49,7 +49,13 @@ namespace Sohi.Web.Controllers
             return View(leadsDetailsViewModel);
         }
 
-       
+        [HttpGet]
+        public IActionResult Create()
+        {
+
+
+            return View();
+        }
 
     }
 }

@@ -1,0 +1,129 @@
+﻿@model SendEmailViewModel
+
+@{
+}
+<style>
+    .rounded-circle {
+        border: 1px solid #bbcbda;
+        position: relative;
+    }
+
+
+    .circle-f {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(44,108,128)
+    }
+
+        .circle-f::before {
+            content: "+";
+            height: 22px;
+            width: 22px;
+            font-size: 21px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: courier;
+            color: white;
+            position: relative;
+            background-color: black;
+            border-radius: 50%;
+            left: 1rem;
+            bottom: 1rem;
+        }
+</style>
+
+<div class="container-fluid mt-3">
+
+
+
+    <div class="row" style="width:100%;">
+        <div class="col-md-11"></div>
+        <div class="col-md-1" style="display:inherit;">
+
+            <a class="nav-link active" aria-current="page" href="#" style="padding: 0.5rem 0.5rem;">
+                <img src="/images/fb.png" class="rounded-circle" width="35" height="35" />
+                <span class="circle-f">
+                </span>
+            </a>
+
+
+        </div>
+        <hr />
+
+
+
+    </div>
+
+    <div class="row" style="width:100%;">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Compose Email
+                </div>
+                <div class="card-body">
+
+                    <div class="col-md-12">
+                        <form method="post">
+
+
+                            <div class="form-group">
+                                <label for="txtTo">To</label>
+                                <input asp-for="To" type="text" class="form-control" id="txtTo" />
+                            </div>
+
+                            <br />
+
+                            <div class="form-group">
+                                <label for="txtBcc">Cc</label>
+                                <input asp-for="Cc" type="text" class="form-control" id="txtBcc" />
+                            </div>
+
+                            <br />
+
+                            <div class="form-group">
+                                <label for="txtBcc">Bcc</label>
+                                <input asp-for="Bcc" type="text" class="form-control" id="txtBcc" />
+                            </div>
+
+                            <br />
+
+
+                            <div class="form-group">
+                                <label for="txtSubject">Subject</label>
+                                <input asp-for="Subject" type="text" class="form-control" id="txtSubject" />
+                            </div>
+
+                            <br />
+
+                            <div class="form-group">
+                                <label for="txtBody">Description</label>
+                                <textarea asp-for="Body" rows="10" class="form-control" id="txtBody"></textarea>
+                            </div>
+                            <br />
+
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Net;
-using System.Net.Mail;
-
-namespace Sohi.Web.Models.Emails
+namespace Sohi.Web.ViewModels
 {
-    public class Emails
+    public class SendEmailViewModel
     {
         public string From { get; set; }
 

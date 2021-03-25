@@ -118,6 +118,14 @@
                                 </li>
 
                                 <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Email" asp-action="Send">
+                                        @*<img src="/images/email-marketing-icon.png" width="24" height="24" style="color:white;" />*@
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                        Email Marketing
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
                                     <a class="nav-link" asp-controller="Leads" asp-action="Index">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                         Leads
@@ -150,12 +158,12 @@
                                     </a>
                                 </li>
                                 @*<li class="nav-item">
-                                    <form method="post" asp-action="logout" asp-controller="account">
-                                        <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
-                                            Logout @User.Identity.Name
-                                        </button>
-                                    </form>
-                                </li>*@
+                    <form method="post" asp-action="logout" asp-controller="account">
+                        <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                            Logout @User.Identity.Name
+                        </button>
+                    </form>
+                </li>*@
 
                             </ul>
                         </div>
@@ -164,7 +172,7 @@
                     <div class="content w-100">
 
                         <div class="container-fluid">
-                            <main role="main" class="pb-3">
+                            <main role="main">
                                 @RenderBody()
                             </main>
                         </div>

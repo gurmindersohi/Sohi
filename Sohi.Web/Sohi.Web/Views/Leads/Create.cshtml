@@ -1,0 +1,141 @@
+﻿
+@model LeadsDetailsViewModel
+
+
+
+<div class="row mt-10">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Create New Lead
+            </div>
+            <div class="card-body">
+
+                    <form method="post">
+
+
+                        <div class="form-group">
+                            <label for="txtFirstName">First Name</label>
+                            <input asp-for="leads.FirstName" type="text" class="form-control" id="txtFirstName" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="txtLastName">Last Name</label>
+                            <input asp-for="leads.LastName" type="text" class="form-control" id="txtLastName" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="txtEmail">Email</label>
+                            <input asp-for="leads.Email" type="text" class="form-control" id="txtEmail" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="txtPrimaryPhone">Primary Phone</label>
+                            <input asp-for="leads.PrimaryPhone" type="text" class="form-control" id="txtPrimaryPhone" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="txtSecondaryPhone">Secondary Phone</label>
+                            <input asp-for="leads.SecondaryPhone" type="text" class="form-control" id="txtSecondaryPhone" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="DateOfBirth">Date Of Birth</label>
+                            <input asp-for="leads.DateOfBirth" type="text" class="form-control" id="DateOfBirth" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="Gender">Gender</label>
+                            <input asp-for="leads.Gender" type="text" class="form-control" id="Gender" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="PhotoPath">Photo</label>
+                            <input asp-for="leads.PhotoPath" type="text" class="form-control" id="PhotoPath" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="Address">Address</label>
+                            <input asp-for="leads.Address" type="text" class="form-control" id="Address" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="City">City</label>
+                            <input asp-for="leads.City" type="text" class="form-control" id="City" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="Province">Province</label>
+                            <input asp-for="leads.Province" type="text" class="form-control" id="Province" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="Country">Country</label>
+                            <input asp-for="leads.Country" type="text" class="form-control" id="Country" />
+                        </div>
+
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="LeadSource">LeadSource</label>
+                            <input asp-for="leads.LeadSource" type="text" class="form-control" id="LeadSource" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="IsPhoneCallAllowed">Phone Call Allowed</label>
+                            <input asp-for="leads.IsPhoneCallAllowed" type="text" class="form-control" id="IsPhoneCallAllowed" />
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="IsEmailAllowed">Email Allowed</label>
+                            <input asp-for="leads.IsEmailAllowed" type="text" class="form-control" id="IsEmailAllowed" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Create</button>
+
+
+                    </form>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>

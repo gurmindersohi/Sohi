@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 //using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Sohi.Web.Models.Emails;
+using Sohi.Web.ViewModels;
 //using MimeKit;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,56 +17,50 @@ namespace Sohi.Web.Controllers
 {
     public class EmailController : Controller
     {
+
+        private readonly IEmailsRepository _emailsRepository;
+
+        public EmailController(IEmailsRepository emailsRepository)
+        {
+            _emailsRepository = emailsRepository;
+        }
+
+
         public IActionResult Index()
         {
             return View();
         }
 
-        //[AllowAnonymous]
-        //public IActionResult SendEmail(string emailTo, string body)
-        //{
-        //    var message = new MimeMessage();
 
-        //    message.From.Add(new MailboxAddress("Dc", "gurminder290195@gmail.com"));
-        //    message.To.Add(new MailboxAddress("", emailTo));
-        //    message.Subject = "Email Sent from .Net Project";
-        //    message.Body = new TextPart("plain")
-        //    {
-        //        Text = body
-        //    };
-
-        //    using (var client = new SmtpClient())
-        //    {
-        //        client.Connect("smtp.gmail.com", 587, false);
-        //        client.Authenticate("gurminder290195@gmail.com", "suyhttmdxskvvebp");
-        //        client.Send(message);
-
-        //        client.Disconnect(true);
-        //    }
-
-        //        return View();
-        //}
-
-        [AllowAnonymous]
-        public IActionResult InSendEmail(string emailTo, string body)
+        [HttpGet]
+        public IActionResult Send()
         {
-            MailMessage mail = new MailMessage();
-
-            mail.From = new MailAddress("gurminder290195@gmail.com");
-            mail.To.Add("gurminder29011995@gmail.com");
-            mail.Subject = "Confirm your email";
-            mail.Body = "Test In built email";
-            mail.IsBodyHtml = true;
-
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
-
-            client.Port = 587;
-            client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("gurminder290195@gmail.com", "suyhttmdxskvvebp");
-
-            client.Send(mail);
-
             return View();
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Send(SendEmailViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var email = new Emails
+                {
+                    From = "gurminder290195@gmail.com",
+                    To = model.To,
+                    Cc = model.Cc,
+                    Bcc = model.Bcc,
+                    Subject = model.Subject,
+                    Body = model.Body,
+                };
+
+
+                _emailsRepository.SendEmail(email);
+
+            }
+
+            return View(model);
+        }
+
     }
 }
