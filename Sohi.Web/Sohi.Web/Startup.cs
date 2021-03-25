@@ -13,6 +13,10 @@ using Sohi.Web.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Sohi.Web.Models.Leads;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Sohi.Web.Security;
+using Sohi.Web.Models.Emails;
 
 namespace Sohi.Web
 {
@@ -31,16 +35,26 @@ namespace Sohi.Web
         {
             services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("SohiDbConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 10;
                 options.Password.RequiredUniqueChars = 3;
-            }).AddEntityFrameworkStores<AppDbContext>();
+                options.SignIn.RequireConfirmedEmail = true;
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
+            services.AddMvc(config => {
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
 
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
             services.AddScoped<ILeadsRepository, MockLeadsRepository>();
+            services.AddScoped<IEmailsRepository, EmailsRepository>();
             //services.AddScoped<IUserRepository, SQLUserRepository>();
+
+            services.AddSingleton<DataProtectionPurposeStrings>();
 
         }
 

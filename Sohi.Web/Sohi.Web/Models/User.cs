@@ -1,37 +1,36 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Sohi.Web.Models
 {
-        public class User : ModelBase
-        {
-            public Guid? UserId { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
+    public class User : IdentityUser
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
-            [Required]
-            [EmailAddress]
-            public string Email { get; set; }
+        [Required]
+        [EmailAddress]
+        public override string Email { get; set; }
 
-            [Required]
-            [DataType(DataType.Password)]
-            public string Password { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        public override string PasswordHash { get; set; }
 
-            public DateTime DateOfBirth { get; set; }
-            public string Gender { get; set; }
-            public string PhotoPath { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Gender { get; set; }
+        public string PhotoPath { get; set; }
 
-            [Display(Name = "Remember me")]
-            public bool RememberMe { get; set; }
+        [Display(Name = "Remember me")]
+        public bool RememberMe { get; set; }
 
+        public string IsDeleted { get; set; }
 
-            public bool EmailConfirmed { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime? CreatedOn { get; set; }
+        public string ModifiedBy { get; set; }
+        public DateTime? ModifiedOn { get; set; }
+        public bool? IsActive { get; set; }
 
-            public Guid? AccountId { get; set; }
-            public string AccountName { get; set; }
-            public string AccountSource { get; set; }
-
-            public string AccessLevel { get; set; }
-            public string IsDeleted { get; set; }
-        }
+    }
 }

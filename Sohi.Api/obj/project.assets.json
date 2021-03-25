@@ -75,16 +75,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "Sohi.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Sohi.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Sohi.Models.dll": {}
-        }
       }
     }
   },
@@ -195,48 +185,40 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
-    },
-    "Sohi.Models/1.0.0": {
-      "type": "project",
-      "path": "../Sohi.Models/Sohi.Models.csproj",
-      "msbuildProject": "../Sohi.Models/Sohi.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Sohi.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "/Users/gurmindersingh/.nuget/packages/": {}
+    "C:\\Users\\gurmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gurmindersingh/Projects/Sohi/Sohi.Api/Sohi.Api.csproj",
+      "projectUniqueName": "C:\\Users\\gurmi\\Source\\Repos\\gurmindersingh751\\Sohi\\Sohi.Api\\Sohi.Api.csproj",
       "projectName": "Sohi.Api",
-      "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Api/Sohi.Api.csproj",
-      "packagesPath": "/Users/gurmindersingh/.nuget/packages/",
-      "outputPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Api/obj/",
+      "projectPath": "C:\\Users\\gurmi\\Source\\Repos\\gurmindersingh751\\Sohi\\Sohi.Api\\Sohi.Api.csproj",
+      "packagesPath": "C:\\Users\\gurmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gurmi\\Source\\Repos\\gurmindersingh751\\Sohi\\Sohi.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gurmindersingh/.config/NuGet/NuGet.Config"
+        "C:\\Users\\gurmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "/Users/gurmindersingh/Projects/Sohi/Sohi.Models/Sohi.Models.csproj": {
-              "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Models/Sohi.Models.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -272,7 +254,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -26,8 +26,15 @@ using Sohi.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Views/_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"217825f442d39e193a8abd64fbac694e84c25ae8", @"/Views/Shared/NotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6a5110dd3e723fbf81dc4af9982678686a88bb9d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fa0b4307bd52352669975fc74bbdfed218d0edd3", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_NotFound : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -89,7 +96,7 @@ Write(ViewBag.QS);
 #line hidden
 #nullable disable
             WriteLiteral("</h1>\n\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "217825f442d39e193a8abd64fbac694e84c25ae84502", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "217825f442d39e193a8abd64fbac694e84c25ae84693", async() => {
                 WriteLiteral("\n    Click here to navigate to the home page\n");
             }
             );

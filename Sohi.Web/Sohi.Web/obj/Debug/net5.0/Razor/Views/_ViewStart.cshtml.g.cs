@@ -26,8 +26,15 @@ using Sohi.Web.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Views/_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a94a97817a7241ec9bcc3631841c3ae201ec3d28", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6a5110dd3e723fbf81dc4af9982678686a88bb9d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fa0b4307bd52352669975fc74bbdfed218d0edd3", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
