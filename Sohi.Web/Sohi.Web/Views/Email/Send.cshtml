@@ -72,10 +72,38 @@
                         <form method="post">
 
 
-                            <div class="form-group">
-                                <label for="txtTo">To</label>
-                                <input asp-for="To" type="text" class="form-control" id="txtTo" />
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="LeadsFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Filter leads to send mass emails
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="LeadsFilter">
+                                    <li><a class="dropdown-item" asp-controller="Leads" asp-action="GetLeads">All Leads</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">Last Month</a></li>
+                                    <li><a class="dropdown-item" href="#">Custom Date</a></li>
+                                </ul>
                             </div>
+
+                            <br />
+
+                        <div class="form-group">
+                            <br />
+                            <label for="txtTo">To</label>
+
+                            @{
+                                var emails = "";
+
+                                if (Model != null)
+                                {
+                                    emails = Model.To;
+                                }
+                            }
+
+                            <input asp-for="To" type="text" class="form-control" id="txtTo" value="@Html.Raw(emails)" />
+
+
+                        </div>
 
                             <br />
 

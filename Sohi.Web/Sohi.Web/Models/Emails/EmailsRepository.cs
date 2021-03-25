@@ -40,7 +40,7 @@ namespace Sohi.Web.Models.Emails
 
             if (email.Bcc != null)
             {
-                mail.Bcc.Add(email.Cc);
+                mail.Bcc.Add(email.Bcc);
             }
 
             mail.Subject = email.Subject;
@@ -64,6 +64,7 @@ namespace Sohi.Web.Models.Emails
             //    return ex.GetBaseException;
             //    // ex.FailedRecipient and ex.GetBaseException() should give you enough info.
             //}
+
 
         }
 

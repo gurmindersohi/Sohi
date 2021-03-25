@@ -44,18 +44,26 @@ namespace Sohi.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var email = new Emails
+                string To = model.To;
+                string[] recievers = To.Split(',');
+
+                foreach (var to in recievers)
                 {
-                    From = "gurminder290195@gmail.com",
-                    To = model.To,
-                    Cc = model.Cc,
-                    Bcc = model.Bcc,
-                    Subject = model.Subject,
-                    Body = model.Body,
-                };
+                    var email = new Emails
+                    {
+                        From = "gurminder290195@gmail.com",
+                        To = to,
+                        Cc = model.Cc,
+                        Bcc = model.Bcc,
+                        Subject = model.Subject,
+                        Body = model.Body,
+                    };
 
 
-                _emailsRepository.SendEmail(email);
+                    _emailsRepository.SendEmail(email);
+                }
+
+                
 
             }
 

@@ -57,5 +57,28 @@ namespace Sohi.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult GetLeads()
+        {
+            var model = _leadsRepository.GetAllLeads("1");
+
+            List<string> list = new List<string>();
+
+            foreach (var item in model)
+            {
+                list.Add(item.Email);
+
+            }
+
+            string emails = String.Join(",", list.ToArray());
+
+            SendEmailViewModel emailsViewModel = new SendEmailViewModel()
+            {
+                To = emails,
+            };
+
+            return View("../Email/Send", emailsViewModel);
+        }
+
     }
 }
