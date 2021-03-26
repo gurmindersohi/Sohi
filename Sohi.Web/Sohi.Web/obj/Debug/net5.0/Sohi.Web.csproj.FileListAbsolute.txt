@@ -265,9 +265,6 @@ C:/Users/gurmi/source/repos/gurmindersingh751/Sohi/Sohi.Web/Sohi.Web/obj/Debug/n
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/ForgotPasswordConfirmation.cshtml.g.cs
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/ResetPassword.cshtml.g.cs
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/ResetPasswordConfirmation.cshtml.g.cs
-/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/bin/Debug/net5.0/MailKit.dll
-/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/bin/Debug/net5.0/MimeKit.dll
-/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/bin/Debug/net5.0/BouncyCastle.Crypto.dll
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/ChangePassword.cshtml.g.cs
 /Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/ChangePasswordConfirmation.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Account/AccessDenied.cshtml.g.cs
@@ -281,3 +278,6 @@ C:/Users/gurmi/source/repos/gurmindersingh751/Sohi/Sohi.Web/Sohi.Web/obj/Debug/n
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Email/Index.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Email/Send.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Leads/Create.cshtml.g.cs
+/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Email/Index.cshtml.g.cs
+/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Email/Send.cshtml.g.cs
+/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Leads/Create.cshtml.g.cs
