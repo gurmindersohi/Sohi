@@ -10,6 +10,7 @@ using Sohi.Web.ViewModels;
 using Sohi.Web.Models.Emails;
 using System.Net.Mail;
 using System.Net;
+using Sohi.Web.Models.Account;
 
 namespace Sohi.Web.Controllers
 {
@@ -21,12 +22,17 @@ namespace Sohi.Web.Controllers
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
 
+        private readonly IAccountRepository _accountRepository;
+
         public AccountController(UserManager<User> userManager,
-            SignInManager<User> signInManager)
+            SignInManager<User> signInManager, IAccountRepository accountRepository)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             //_emails = emails;
+
+            _accountRepository = accountRepository;
+
         }
 
         // Change Password
@@ -236,6 +242,12 @@ namespace Sohi.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                //Create an Account
+
+
+
+
                 var user = new User
                 {
                     UserName = model.Email,
@@ -246,6 +258,13 @@ namespace Sohi.Web.Controllers
 
                 if (result.Succeeded)
                 {
+
+                    //Create a Member
+
+                    //Create a Membership
+
+
+
                     var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
 
                     var confirmationLink = Url.Action("ConfirmEmail", "Account",

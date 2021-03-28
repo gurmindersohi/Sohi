@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Sohi.Web.Security;
 using Sohi.Web.Models.Emails;
 using Sohi.Web.Models.SocialMedia;
+using Sohi.Web.Models.Account;
 
 namespace Sohi.Web
 {
@@ -53,6 +54,8 @@ namespace Sohi.Web
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
 
             services.AddScoped<ISocialMediaRepository, SocialMediaRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+
 
             services.AddScoped<ILeadsRepository, MockLeadsRepository>();
             services.AddScoped<IEmailsRepository, EmailsRepository>();

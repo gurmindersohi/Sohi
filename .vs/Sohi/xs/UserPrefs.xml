@@ -1,26 +1,24 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../usr/local/share/dotnet/sdk/5.0.201/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Startup.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="258" Column="22" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/User.cs" Line="32" Column="34" />
-      <File FileName="../../../../usr/local/share/dotnet/sdk/5.0.201/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="241" Column="5" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="34" Column="52" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/EmailController.cs" Line="25" Column="50" />
+      <File FileName="Sohi.Web/Sohi.Web/Startup.cs" Line="56" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Sohi" expanded="True" selected="True">
+          <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
                 <Node name="Controllers" expanded="True" />
                 <Node name="Migrations" expanded="True" />
-                <Node name="Models" expanded="True" />
-                <Node name="Properties" expanded="True" />
-                <Node name="ViewModels" expanded="True" />
-                <Node name="Views" expanded="True">
+                <Node name="Models" expanded="True">
                   <Node name="Account" expanded="True" />
-                  <Node name="Administration" expanded="True" />
-                  <Node name="Marketing" expanded="True" />
+                  <Node name="Emails" expanded="True" />
+                  <Node name="Leads" expanded="True" />
                 </Node>
+                <Node name="Startup.cs" selected="True" />
               </Node>
             </Node>
           </Node>

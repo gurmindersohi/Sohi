@@ -37,6 +37,7 @@
     <Folder Include="wwwroot\images\" />
     <Folder Include="Views\Email\" />
     <Folder Include="Models\SocialMedia\" />
+    <Folder Include="Models\Account\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
