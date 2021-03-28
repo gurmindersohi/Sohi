@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -23,6 +24,8 @@ namespace Sohi.Web.Models
 
         [Display(Name = "Remember me")]
         public bool RememberMe { get; set; }
+
+        public string AccountId { get; set; }
 
         public string IsDeleted { get; set; }
 
