@@ -24,6 +24,8 @@ namespace Sohi.Web.Models
         [Display(Name = "Remember me")]
         public bool RememberMe { get; set; }
 
+        public string AccountId { get; set; }
+
         public string IsDeleted { get; set; }
 
         public string CreatedBy { get; set; }
