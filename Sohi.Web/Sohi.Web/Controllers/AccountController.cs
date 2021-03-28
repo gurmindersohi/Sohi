@@ -245,13 +245,17 @@ namespace Sohi.Web.Controllers
 
                 //Create an Account
 
+                Account account = MapAccountValues();
+                account.Email = model.Email;
 
+                Account acc = _accountRepository.Add(account);
 
 
                 var user = new User
                 {
                     UserName = model.Email,
-                    Email = model.Email
+                    Email = model.Email,
+                    AccountId = acc.AccountId.ToString()
                 };
 
                 var result = await userManager.CreateAsync(user, model.Password);
@@ -346,6 +350,27 @@ namespace Sohi.Web.Controllers
 
             client.Send(mail);
 
+        }
+
+        
+        private Account MapAccountValues() {
+            Account account = new Account();
+            account.AccountId = new Guid();
+            account.AccountType = "Diamond";
+            account.Email = "";
+            account.UsersLimit = "10";
+            account.EmailConfirmed = false;
+            account.TrialExpiry = DateTime.Now.AddDays(14);
+            account.IsAccountPaid = false;
+            account.IsDeleted = false;
+            account.OnHold = false;
+            account.CreatedBy = "";
+            account.CreatedOn = DateTime.Now;
+            account.ModifiedBy = "";
+            account.ModifiedOn = DateTime.Now;
+            account.IsActive = true;
+
+            return account;
         }
 
     }

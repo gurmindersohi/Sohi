@@ -18,18 +18,18 @@ namespace Sohi.Web.Models.Account
 		public string UsersLimit { get; set; }
 
 		public string Logo { get; set; }
-		public string EmailConfirmed { get; set; }
-		public string TrialExpiry { get; set; }
-		public string IsAccountPaid { get; set; }
-		public string IsDeleted { get; set; }
-		public string OnHold { get; set; }
+		public bool EmailConfirmed { get; set; }
+		public DateTime TrialExpiry { get; set; }
+		public bool IsAccountPaid { get; set; }
+		public bool IsDeleted { get; set; }
+		public bool OnHold { get; set; }
 
-		public string HolddDate { get; set; }
+		public DateTime HolddDate { get; set; }
 		public string CreatedBy { get; set; }
-		public string CreatedOn { get; set; }
+		public DateTime CreatedOn { get; set; }
 		public string ModifiedBy { get; set; }
-		public string ModifiedOn { get; set; }
-		public string IsActive { get; set; }
+		public DateTime ModifiedOn { get; set; }
+		public bool IsActive { get; set; }
 
 
 	}

@@ -56,7 +56,7 @@ namespace Sohi.Web.Controllers
                         Cc = model.Cc,
                         Bcc = model.Bcc,
                         Subject = model.Subject,
-                        Body = model.Body,
+                        Body = model.Body
                     };
 
 
