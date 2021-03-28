@@ -1,8 +1,13 @@
-﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs">
+﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Index.cshtml" Line="40" Column="39" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="71" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="39" Column="68" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs" Line="10" Column="21" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" Line="121" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Index.cshtml" />
+      <File FileName="Sohi.Web/Sohi.Web/Startup.cs" Line="27" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/appsettings.json" Line="19" Column="19" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/ILeadsRepository.cs" Line="11" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,12 +15,17 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="MarketingController.cs" selected="True" />
+                <Node name="Controllers" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Emails" expanded="True" />
+                  <Node name="Leads" expanded="True" />
+                  <Node name="SocialMedia" expanded="True">
+                    <Node name="ISocialMediaRepository.cs" selected="True" />
+                  </Node>
                 </Node>
+                <Node name="Properties" expanded="True" />
+                <Node name="ViewModels" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Administration" expanded="True" />
-                  <Node name="Email" expanded="True" />
                   <Node name="Marketing" expanded="True" />
                 </Node>
               </Node>
@@ -25,14 +35,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" line="28" column="1" />
-      <Breakpoint file="/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" line="69" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
