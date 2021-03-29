@@ -51,6 +51,8 @@ namespace Sohi.Web
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
 
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
 
             services.AddScoped<ISocialMediaRepository, SocialMediaRepository>();

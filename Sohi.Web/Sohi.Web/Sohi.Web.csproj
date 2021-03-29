@@ -38,6 +38,7 @@
     <Folder Include="Views\Email\" />
     <Folder Include="Models\SocialMedia\" />
     <Folder Include="Models\Account\" />
+    <Folder Include="Views\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
@@ -47,6 +48,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.4" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\facebook.png" />
