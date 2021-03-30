@@ -14,5 +14,7 @@ namespace Sohi.Web.Models.SocialMedia
         string GetInstagramLoginUrl();
 
 
+        SocialMedia Add(SocialMedia account);
+
     }
 }

@@ -1,8 +1,8 @@
-﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Settings/Index.cshtml">
+﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="154" Column="81" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Settings/Index.cshtml" Line="4" Column="30" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Account/Login.cshtml" Line="13" Column="31" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/_Layout.cshtml" Line="13" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,15 +10,9 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Migrations" expanded="True" />
-                <Node name="Models" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Leads" expanded="True" />
-                  <Node name="Settings" expanded="True">
-                    <Node name="Index.cshtml" selected="True" />
-                  </Node>
-                  <Node name="Shared" expanded="True" />
+                  <Node name="Account" expanded="True" />
+                  <Node name="Shared" expanded="True" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -27,13 +21,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/gurmindersingh/Documents/Sohi/Sohi.Web/Sohi.Web/Controllers/AccountController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" line="242" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

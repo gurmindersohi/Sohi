@@ -14,7 +14,9 @@ namespace Sohi.Web.Models
         //public DbSet<Leads.Leads> Leads { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public DbSet<Account.Account> Account { get; set; }
+        public DbSet<Account.Account> Accounts { get; set; }
+
+        public DbSet<SocialMedia.SocialMedia> SocialMediaAccounts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

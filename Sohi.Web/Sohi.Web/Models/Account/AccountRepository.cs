@@ -13,7 +13,7 @@ namespace Sohi.Web.Models.Account
 
         public Account Add(Account account)
         {
-            context.Account.Add(account);
+            context.Accounts.Add(account);
             context.SaveChanges();
 
             return account;

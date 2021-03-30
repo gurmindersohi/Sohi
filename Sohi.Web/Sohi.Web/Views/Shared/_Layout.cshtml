@@ -8,13 +8,13 @@
 
     <title>@ViewBag.Title</title>
     <style>
-        .wrapper {
+        @*.wrapper {
             display: flex;
             align-items: stretch;
             padding: 0;
-        }
+        }*@
 
-        #sidebarMenu ul p {
+        @*#sidebarMenu ul p {
             color: #fff;
         }
 
@@ -34,8 +34,12 @@
 
         #sidebarMenu ul li.active > a, a[aria-expanded="true"] {
             color: #fff;
-            background: #394452;
+            background: #394452;*@
         }
+
+
+       
+
     </style>
 </head>
 <body>
@@ -63,14 +67,11 @@
         </header>
 
         <div class="container-fluid">
-            <div class="row mt-5" style="height: calc(100vh - 0px);">
-                <div class="col">
-                    <div class="container-fluid">
-                        <main role="main" class="pb-3">
+            <div class="row" style="height: calc(100vh - 60px);">
+                
+                        <main role="main" style="height: calc(100vh - 60px);">
                             @RenderBody()
                         </main>
-                    </div>
-                </div>
 
             </div>
         </div>

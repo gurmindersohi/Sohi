@@ -1,4 +1,9 @@
-﻿
+﻿@*@{
+    Layout = "Settings";
+}
+
+
+
 <style>
 
     .list-group-item:active {
@@ -6,10 +11,10 @@
         background: rgba(11,144,255,0.07) !important;
         border-left: 1px solid #0B90FF !important;
     }
+
     .list-group-item {
         color: rgba(9,19,44,0.7) !important;
     }
-    
 </style>
 
 <div class="row text-center">
@@ -24,7 +29,7 @@
         <div id="sidebar">
             <ul class="nav list-group" style="cursor:pointer;">
                 <li>
-                    <a class="list-group-item border-top-0 border-bottom-0 border-end-0 border-left-5"><i class="icon-home icon-1x"></i>General</a>
+                    <a class="list-group-item border-top-0 border-bottom-0 border-end-0 border-left-5" asp-action="ChangePassword" asp-controller="Account"><i class="icon-home icon-1x"></i>General</a>
                 </li>
                 <li>
                     <a class="list-group-item border-top-0 border-bottom-0 border-end-0 border-left-5"><i class="icon-home icon-1x"></i>Create user</a>
@@ -54,4 +59,4 @@
         background: rgba(11,144,255,0.07);
         border-left: 1px solid #0B90FF;
     }
-</style>
+</style>*@

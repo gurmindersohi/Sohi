@@ -14,12 +14,15 @@ namespace Sohi.Web.Models.SocialMedia
 {
     public class SocialMediaRepository : ISocialMediaRepository
     {
+        private readonly AppDbContext context;
+
         private IConfiguration _config;
         private static readonly HttpClient client = new HttpClient();
 
-        public SocialMediaRepository(IConfiguration configuration)
+        public SocialMediaRepository(IConfiguration configuration, AppDbContext context)
         {
             _config = configuration;
+            this.context = context;
         }
        
         public async Task<string> GenerateInstagramTokenAsync(string code)
@@ -119,6 +122,14 @@ namespace Sohi.Web.Models.SocialMedia
 
             return url;
 
+        }
+
+        public SocialMedia Add(SocialMedia account)
+        {
+            context.SocialMediaAccounts.Add(account);
+            context.SaveChanges();
+
+            return account;
         }
     }
 }

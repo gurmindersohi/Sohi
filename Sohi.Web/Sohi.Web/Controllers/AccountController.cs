@@ -21,15 +21,17 @@ namespace Sohi.Web.Controllers
 
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
+        private readonly RoleManager<IdentityRole> roleManager;
 
         private readonly IAccountRepository _accountRepository;
 
         public AccountController(UserManager<User> userManager,
-            SignInManager<User> signInManager, IAccountRepository accountRepository)
+            SignInManager<User> signInManager, IAccountRepository accountRepository, RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             //_emails = emails;
+            this.roleManager = roleManager;
 
             _accountRepository = accountRepository;
 
@@ -263,6 +265,11 @@ namespace Sohi.Web.Controllers
                 if (result.Succeeded)
                 {
 
+                    var role = await roleManager.FindByIdAsync("cd9a0163-fde3-4bc1-a9b6-1c76926e78ff");
+
+                    var assigned = await userManager.AddToRoleAsync(user, role.Name);
+
+
                     //Create a Member
 
                     //Create a Membership
@@ -355,18 +362,19 @@ namespace Sohi.Web.Controllers
         
         private Account MapAccountValues() {
             Account account = new Account();
-            account.AccountId = new Guid();
+            account.AccountId = Guid.NewGuid();
             account.AccountType = "Diamond";
             account.Email = "";
             account.UsersLimit = "10";
-            account.EmailConfirmed = false;
+
             account.TrialExpiry = DateTime.Now.AddDays(14);
             account.IsAccountPaid = false;
             account.IsDeleted = false;
             account.OnHold = false;
-            account.CreatedBy = "";
+
+            account.CreatedBy = "Home";
             account.CreatedOn = DateTime.Now;
-            account.ModifiedBy = "";
+            account.ModifiedBy = "Home";
             account.ModifiedOn = DateTime.Now;
             account.IsActive = true;
 
