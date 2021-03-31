@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Sohi.Web.Models;
 using Sohi.Web.Models.SocialMedia;
+using Sohi.Web.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -27,10 +28,45 @@ namespace Sohi.Web.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            List<SocialMedia> socialMedia = await GetTokenAsync();
 
-            return View();
+            SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+            string instaimg = "";
+
+            if (socialMedia != null)
+            {
+                foreach (var account in socialMedia)
+                {
+                    if (account.Type == "Facebook")
+                    {
+                        Profile profile = await GetFacebookAccountAsync(account.AccessToken);
+
+                        socialMediaViewModel.FacebookAccountId = profile.Id;
+                        socialMediaViewModel.FacebookAccountName = profile.Name;
+                        socialMediaViewModel.FacebookAccountImg = profile.Image;
+                    }
+
+                    //if (account.Type == "Instagram")
+                    //{
+                    //    var instagram = GetInstagramAccountAsync(account.AccessToken);
+                    //}
+
+                }
+
+                socialMediaViewModel.InstagramAccountImg = "";
+                //socialMediaViewModel.FacebookAccountImg = "";
+
+            }
+            else 
+            {
+                string abc = "error";
+            }
+
+
+            return View(socialMediaViewModel);
         }
 
         public void FacebookLogin()
@@ -44,7 +80,7 @@ namespace Sohi.Web.Controllers
         {
             string token = await _socialMediaRepository.GenerateFacebookTokenAsync(code);
 
-            var result = SaveTokenAsync(token, "Facebook");
+            var result = await SaveTokenAsync(token, "Facebook");
            
             return View("Index");
         }
@@ -103,5 +139,36 @@ namespace Sohi.Web.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<List<SocialMedia>> GetTokenAsync()
+        {
+                List<SocialMedia> acc = new List<SocialMedia>();
+
+                var user = await userManager.GetUserAsync(User);
+
+                if (user != null)
+                {
+                   acc =  _socialMediaRepository.GetTokenAsync(user.AccountId);
+                }
+
+                return acc;
+          
+        }
+
+
+        public async Task<string> GetInstagramAccountAsync(string accesstoken)
+        {
+            string result = await _socialMediaRepository.GetInstagramAccountAsync(accesstoken);
+
+
+            return "";
+        }
+
+        public async Task<Profile> GetFacebookAccountAsync(string accesstoken)
+        {
+            Profile profile = await _socialMediaRepository.GetFacebookAccountAsync(accesstoken);
+
+            return profile;
+        }
     }
 }

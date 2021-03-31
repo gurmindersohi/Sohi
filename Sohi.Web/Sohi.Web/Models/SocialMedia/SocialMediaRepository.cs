@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Extensions.Configuration;
+using System.Linq;
 
 namespace Sohi.Web.Models.SocialMedia
 {
@@ -130,6 +131,78 @@ namespace Sohi.Web.Models.SocialMedia
             context.SaveChanges();
 
             return account;
+        }
+
+        public List<SocialMedia> GetTokenAsync(string accountid)
+        {
+            Guid id = new Guid(accountid);
+
+            List<SocialMedia> accounts = new List<SocialMedia>();
+
+                accounts = context.SocialMediaAccounts.Where(a => a.AccountId == accountid).ToList();
+                return accounts;
+
+
+        }
+
+        public async Task<Profile> GetFacebookAccountAsync(string accesstoken)
+        {
+            Profile profile = new Profile();
+
+            string version = _config.GetSection("FacebookApp").GetSection("version").Value;
+
+            string url = string.Format("https://graph.facebook.com/v" + version + "/me?fields=id,name,picture&access_token={0}", accesstoken);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+
+                profile.Id = parsedobj["id"].ToString();
+                profile.Name = parsedobj["name"].ToString();
+                profile.Image = parsedobj["picture"]["data"]["url"].ToString();
+
+                return profile;
+
+            }
+            else
+            {
+                return null;
+                //return response.ReasonPhrase;
+            }
+        }
+
+
+        public async Task<string> GetInstagramAccountAsync(string accesstoken)
+        {
+            string url = string.Format("https://graph.instagram.com/me?fields=id,username,&access_token={0}", accesstoken);
+            //string url = string.Format("https://graph.instagram.com/me?fields=id,username");
+
+            //var values = new Dictionary<string, string>{
+            //      { "accesstoken", accesstoken }
+            //    };
+
+            //var content = new FormUrlEncodedContent(values);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+                string id = parsedobj["id"].ToString();
+                string name = parsedobj["username"].ToString();
+
+                return name;
+
+            }
+            else
+            {
+                return response.ReasonPhrase;
+            }
         }
     }
 }

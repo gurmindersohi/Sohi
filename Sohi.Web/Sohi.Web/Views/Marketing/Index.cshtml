@@ -1,6 +1,9 @@
-﻿@page
+﻿
+@model SocialMediaViewModel
+
 @{
 }
+
 <style>
     .rounded-circle {
         border: 1px solid #bbcbda;
@@ -37,7 +40,7 @@
 
 <form method="post">
 
-    <div class="container-fluid mt-3">
+    <div class="container-fluid mt-3" style="background-color:#f8f9fa !important; height: calc(100vh - 0px);">
 
 
 
@@ -50,7 +53,7 @@
                     </span>
                 </a>
                 <a class="nav-link active" aria-current="page" asp-controller="Marketing" asp-action="FacebookLogin" style="padding: 0.5rem 0.5rem;">
-                    <img src="/images/fb.png" class="rounded-circle" width="35" height="35" />
+                    <img src="@Model.FacebookAccountImg" class="rounded-circle" width="35" height="35" />
                     <span class="circle-f">
                     </span>
                 </a>
@@ -76,38 +79,38 @@
                         <div class="col-md-12">
 
 
-                                <div class="form-group">
-                                    <label for="uploadfile">Media</label>
-                                    <input type="file" class="form-control" id="uploadfile">
-                                </div>
+                            <div class="form-group">
+                                <label for="uploadfile">Media</label>
+                                <input type="file" class="form-control" id="uploadfile">
+                            </div>
 
-                                <br />
+                            <br />
 
 
-                                <div class="form-group">
-                                    <label for="txtdescription">Description</label>
-                                    <textarea rows="10" class="form-control" id="txtdescription"></textarea>
-                                </div>
-                                <br />
+                            <div class="form-group">
+                                <label for="txtdescription">Description</label>
+                                <textarea rows="10" class="form-control" id="txtdescription"></textarea>
+                            </div>
+                            <br />
 
-                                <div class="form-group">
-                                    <img src="/images/fb.png" class="rounded-circle" width="50" height="50" />
+                            <div class="form-group">
+                                <img src="/images/fb.png" class="rounded-circle" width="50" height="50" />
+                                <label>Gurminder Singh</label>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+
+                                <div class="col-md-11">
+                                    <img src="/images/Insta.png" class="rounded-circle" width="50" height="50" />
                                     <label>Gurminder Singh</label>
                                 </div>
 
-                                <br />
+                            </div>
 
-                                <div class="row">
-
-                                    <div class="col-md-11">
-                                        <img src="/images/Insta.png" class="rounded-circle" width="50" height="50" />
-                                        <label>Gurminder Singh</label>
-                                    </div>
-
-                                </div>
-
-                                <br />
-                                <button type="submit" class="btn btn-primary me-auto">Post</button>
+                            <br />
+                            <button type="submit" class="btn btn-primary me-auto">Post</button>
 
                         </div>
                     </div>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Sohi.Web.Models.SocialMedia
 {
     public class SocialMedia
@@ -21,5 +23,6 @@ namespace Sohi.Web.Models.SocialMedia
 		public string UserId { get; set; }
 
 		public string AccountId { get; set; }
-	}
+
+    }
 }
