@@ -3,44 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Sohi.Web.Models.Leads;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Sohi.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class LeadsController : Controller
+    [ApiController]
+    public class LeadsController : ControllerBase
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly ILeadsRepository employeeRepository;
+
+        public LeadsController(ILeadsRepository leadsRepository)
         {
-            return new string[] { "value1", "value2" };
+            this.employeeRepository = leadsRepository;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Lead>> CreateLead(Lead lead)
         {
-        }
+            try
+            {
+                if (lead == null)
+                    return BadRequest();
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+                var createdLead = await employeeRepository.Add(lead);
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+                return CreatedAtAction(nameof(GetEmployee),
+                    new { id = createdEmployee.EmployeeId }, createdEmployee);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error creating new employee record");
+            }
         }
     }
 }

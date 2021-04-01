@@ -39,6 +39,7 @@
     <Folder Include="Models\SocialMedia\" />
     <Folder Include="Models\Account\" />
     <Folder Include="Views\Settings\" />
+    <Folder Include="Controllers\Api\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />

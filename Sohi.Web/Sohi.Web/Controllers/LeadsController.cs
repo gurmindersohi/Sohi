@@ -99,19 +99,6 @@ namespace Sohi.Web.Controllers
             return View("../Email/Send", emailsViewModel);
         }
 
-        [ApiController]
-        public HttpResponseMessage Post([FromBody] Lead lead) {
-
-            try {
-                using (Sohidb)
-
-            }
-
-            catch (Exception ex) {
-
-            }
-        }
-
 
     }
 }
