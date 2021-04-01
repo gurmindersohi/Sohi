@@ -10,6 +10,7 @@ using Sohi.Web.ViewModels;
 using Sohi.Web.Models.Emails;
 using System.Net.Mail;
 using System.Net;
+using Sohi.Web.Models.Account;
 
 namespace Sohi.Web.Controllers
 {
@@ -20,13 +21,20 @@ namespace Sohi.Web.Controllers
 
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
+        private readonly RoleManager<IdentityRole> roleManager;
+
+        private readonly IAccountRepository _accountRepository;
 
         public AccountController(UserManager<User> userManager,
-            SignInManager<User> signInManager)
+            SignInManager<User> signInManager, IAccountRepository accountRepository, RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             //_emails = emails;
+            this.roleManager = roleManager;
+
+            _accountRepository = accountRepository;
+
         }
 
         // Change Password
@@ -236,16 +244,38 @@ namespace Sohi.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                //Create an Account
+
+                Account account = MapAccountValues();
+                account.Email = model.Email;
+
+                Account acc = _accountRepository.Add(account);
+
+
                 var user = new User
                 {
                     UserName = model.Email,
-                    Email = model.Email
+                    Email = model.Email,
+                    AccountId = acc.AccountId.ToString()
                 };
 
                 var result = await userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
+
+                    var role = await roleManager.FindByIdAsync("cd9a0163-fde3-4bc1-a9b6-1c76926e78ff");
+
+                    var assigned = await userManager.AddToRoleAsync(user, role.Name);
+
+
+                    //Create a Member
+
+                    //Create a Membership
+
+
+
                     var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
 
                     var confirmationLink = Url.Action("ConfirmEmail", "Account",
@@ -327,6 +357,28 @@ namespace Sohi.Web.Controllers
 
             client.Send(mail);
 
+        }
+
+        
+        private Account MapAccountValues() {
+            Account account = new Account();
+            account.AccountId = Guid.NewGuid();
+            account.AccountType = "Diamond";
+            account.Email = "";
+            account.UsersLimit = "10";
+
+            account.TrialExpiry = DateTime.Now.AddDays(14);
+            account.IsAccountPaid = false;
+            account.IsDeleted = false;
+            account.OnHold = false;
+
+            account.CreatedBy = "Home";
+            account.CreatedOn = DateTime.Now;
+            account.ModifiedBy = "Home";
+            account.ModifiedOn = DateTime.Now;
+            account.IsActive = true;
+
+            return account;
         }
 
     }

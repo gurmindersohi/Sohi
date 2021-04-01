@@ -1,8 +1,12 @@
-﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Models/User.cs">
+﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/AccountController.cs" Line="1" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/User.cs" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="194" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs" Line="25" Column="60" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" Line="220" Column="38" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Index.cshtml" Line="108" Column="17" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="115" Column="88" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Email/Send.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,17 +16,15 @@
               <Node name="Sohi.Web" expanded="True">
                 <Node name="Controllers" expanded="True" />
                 <Node name="Models" expanded="True">
-                  <Node name="Emails" expanded="True" />
-                  <Node name="Leads" expanded="True" />
                   <Node name="SocialMedia" expanded="True" />
-                  <Node name="User.cs" selected="True" />
                 </Node>
-                <Node name="Properties" expanded="True" />
-                <Node name="ViewModels" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Account" expanded="True" />
-                  <Node name="Administration" expanded="True" />
+                  <Node name="Email" expanded="True" />
+                  <Node name="Leads" expanded="True" />
                   <Node name="Marketing" expanded="True" />
+                  <Node name="Shared" expanded="True">
+                    <Node name="Portal.cshtml" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -31,7 +33,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
