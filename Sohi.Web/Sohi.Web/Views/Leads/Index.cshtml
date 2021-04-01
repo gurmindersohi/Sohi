@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Sohi.Web.Models.Leads.Leads>
+﻿@model IEnumerable<Sohi.Web.Models.Leads.Lead>
 
 @{
     ViewBag.Title = "Leads List";
@@ -17,17 +17,25 @@
         <tr>
             <th>FullName</th>
             <th>Email</th>
-            <th>Active</th>
+            <th>Phone</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Lead Source</th>
+            <th>Created On</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var lead in Model)
         {
-            <tr>
-                <td>@lead.FullName</td>
-                <td>@lead.Email</td>
-                <td>@lead.IsActive</td>
-            </tr>
+        <tr>
+            <td>@lead.FullName</td>
+            <td>@lead.Email</td>
+            <td>@lead.PrimaryPhone</td>
+            <td>@lead.DateOfBirth</td>
+            <td>@lead.Gender</td>
+            <td>@lead.LeadSource</td>
+            <td>@lead.CreatedOn</td>
+        </tr>
         }
     </tbody>
 </table>

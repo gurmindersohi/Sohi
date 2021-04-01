@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sohi.Web.Models.Leads
 {
-    public class Leads : ModelBase
+    public class Lead : ModelBase
     {
-        public Guid? LeadId { get; set; }
+        public Guid LeadId { get; set; }
 
-        [NotMapped]
-        public string EncryptedId { get; set; }
+        //[NotMapped]
+        //public string EncryptedId { get; set; }
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -21,7 +21,6 @@ namespace Sohi.Web.Models.Leads
         public string SecondaryPhone { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
-        public string PhotoPath { get; set; }
 
         public string Address { get; set; }
         public string City { get; set; }
@@ -29,13 +28,13 @@ namespace Sohi.Web.Models.Leads
         public string Country { get; set; }
         public string PostalCode { get; set; }
 
-        public string AccountId { get; set; }
+        public Guid AccountId { get; set; }
         public string LeadSource { get; set; }
 
-        public bool IsPhoneCallAllowed { get; set; }
-        public bool IsEmailAllowed { get; set; }
-        public bool IsMember { get; set; }
-        public bool IsDeleted { get; set; }
+        public Boolean IsPhoneCallAllowed { get; set; }
+        public Boolean IsEmailAllowed { get; set; }
+        public Boolean IsTextAllowed { get; set; }
+        public Boolean IsMember { get; set; }
 
     }
 }

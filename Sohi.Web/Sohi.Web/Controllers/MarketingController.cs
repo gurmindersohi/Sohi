@@ -189,11 +189,11 @@ namespace Sohi.Web.Controllers
         }
 
 
-        public async Task<Profile> Post(string accesstoken)
-        {
+        //public async Task<Profile> Post(string accesstoken)
+        //{
 
 
-        }
+        //}
 
 
     }

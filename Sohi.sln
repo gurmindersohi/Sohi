@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.808.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sohi.Web", "Sohi.Web", "{7A658309-ED76-45E0-BB06-B71316B4194F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sohi.Web", "Sohi.Web\Sohi.Web\Sohi.Web.csproj", "{5E802A19-6405-4791-88A8-CF40DFDD1762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sohi.Web", "Sohi.Web\Sohi.Web\Sohi.Web.csproj", "{5E802A19-6405-4791-88A8-CF40DFDD1762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sohi.Api", "Sohi.Api", "{FA92C1A5-CED2-4C42-9B6F-B73A18D96A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sohi.Api", "Sohi.Api\Sohi.Api\Sohi.Api.csproj", "{19352728-DDD6-466B-8F8E-D146C1F2810E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19352728-DDD6-466B-8F8E-D146C1F2810E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19352728-DDD6-466B-8F8E-D146C1F2810E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19352728-DDD6-466B-8F8E-D146C1F2810E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19352728-DDD6-466B-8F8E-D146C1F2810E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E802A19-6405-4791-88A8-CF40DFDD1762} = {7A658309-ED76-45E0-BB06-B71316B4194F}
+		{19352728-DDD6-466B-8F8E-D146C1F2810E} = {FA92C1A5-CED2-4C42-9B6F-B73A18D96A54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E0981D5-64FB-4360-9709-8A287D321FEA}

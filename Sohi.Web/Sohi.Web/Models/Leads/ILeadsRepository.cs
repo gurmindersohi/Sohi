@@ -5,10 +5,10 @@ namespace Sohi.Web.Models.Leads
 {
     public interface ILeadsRepository
     {
-        Leads GetLead(string id);
-        IEnumerable<Leads> GetAllLeads(string accountid);
-        Leads Add(Leads user);
-        Leads Update(Leads user);
-        Leads Delete(string id, string accountid);
+        Lead GetLead(string id);
+        IEnumerable<Lead> GetAllLeads(string accountid);
+        Lead Add(Lead lead);
+        Lead Update(Lead lead);
+        Lead Delete(string id, string accountid);
     }
 }
