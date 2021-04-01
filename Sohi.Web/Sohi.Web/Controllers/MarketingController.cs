@@ -187,5 +187,14 @@ namespace Sohi.Web.Controllers
 
             return profile;
         }
+
+
+        public async Task<Profile> Post(string accesstoken)
+        {
+
+
+        }
+
+
     }
 }

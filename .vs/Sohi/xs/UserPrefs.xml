@@ -1,12 +1,7 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="194" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs" Line="25" Column="60" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" Line="220" Column="38" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Index.cshtml" Line="108" Column="17" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="115" Column="88" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Email/Send.cshtml" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/MarketingController.cs" Line="191" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +9,9 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="MarketingController.cs" selected="True" />
+                </Node>
                 <Node name="Models" expanded="True">
                   <Node name="SocialMedia" expanded="True" />
                 </Node>
@@ -22,9 +19,10 @@
                   <Node name="Email" expanded="True" />
                   <Node name="Leads" expanded="True" />
                   <Node name="Marketing" expanded="True" />
-                  <Node name="Shared" expanded="True">
-                    <Node name="Portal.cshtml" selected="True" />
-                  </Node>
+                  <Node name="Shared" expanded="True" />
+                </Node>
+                <Node name="wwwroot" expanded="True">
+                  <Node name="images" expanded="True" />
                 </Node>
               </Node>
             </Node>
