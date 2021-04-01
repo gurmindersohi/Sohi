@@ -57,7 +57,7 @@ namespace Sohi.Web.Models.SocialMedia
 
             }
             else {
-                return response.ReasonPhrase;
+                return response.StatusCode.ToString();
             }
 
 
@@ -175,17 +175,11 @@ namespace Sohi.Web.Models.SocialMedia
         }
 
 
-        public async Task<string> GetInstagramAccountAsync(string accesstoken)
+        public async Task<Profile> GetInstagramAccountAsync(string accesstoken)
         {
-            string url = string.Format("https://graph.instagram.com/me?fields=id,username,&access_token={0}", accesstoken);
-            //string url = string.Format("https://graph.instagram.com/me?fields=id,username");
-
-            //var values = new Dictionary<string, string>{
-            //      { "accesstoken", accesstoken }
-            //    };
-
-            //var content = new FormUrlEncodedContent(values);
-
+            Profile profile = new Profile();
+            string url = string.Format("https://graph.instagram.com/me?fields=id,username&access_token={0}", accesstoken);
+           
             var response = await client.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
@@ -193,15 +187,45 @@ namespace Sohi.Web.Models.SocialMedia
 
                 var jsonResponse = response.Content.ReadAsStringAsync().Result;
                 var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
-                string id = parsedobj["id"].ToString();
-                string name = parsedobj["username"].ToString();
+                profile.Id = parsedobj["id"].ToString();
+                profile.Name = parsedobj["username"].ToString();
 
-                return name;
+                return profile;
 
             }
             else
             {
-                return response.ReasonPhrase;
+                return null;
+            }
+        }
+
+        public async Task<string> GetInstagramAccountImageAsync(string username)
+        {
+            string url = string.Format("https://www.instagram.com/{0}/?__a=1", username);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                try
+                {
+                    var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                    var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+                    string img = parsedobj["graphql"]["user"]["profile_pic_url"].ToString();
+
+                    return img;
+
+                }
+                catch (JsonReaderException ex) {
+                    return ex.Message;
+
+                }
+
+
+            }
+            else
+            {
+                return null;
             }
         }
     }

@@ -20,9 +20,14 @@ namespace Sohi.Web.Models.SocialMedia
         List<SocialMedia> GetTokenAsync(string accountid);
 
 
-        Task<string> GetInstagramAccountAsync(string accesstoken);
+        Task<Profile> GetInstagramAccountAsync(string accesstoken);
+
+        Task<string> GetInstagramAccountImageAsync(string username);
+
 
         Task<Profile> GetFacebookAccountAsync(string accesstoken);
+
+        Task<Profile> Post(string accesstoken)
 
     }
 }

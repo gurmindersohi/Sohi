@@ -54,5 +54,6 @@
     <None Include="wwwroot\images\facebook.png" />
     <None Include="wwwroot\images\instagram.png" />
     <None Include="wwwroot\images\email-marketing.png" />
+    <None Include="wwwroot\images\img_avatar.png" />
   </ItemGroup>
 </Project>

@@ -43,21 +43,39 @@ namespace Sohi.Web.Controllers
                     if (account.Type == "Facebook")
                     {
                         Profile profile = await GetFacebookAccountAsync(account.AccessToken);
-
-                        socialMediaViewModel.FacebookAccountId = profile.Id;
-                        socialMediaViewModel.FacebookAccountName = profile.Name;
-                        socialMediaViewModel.FacebookAccountImg = profile.Image;
+                        if (profile != null)
+                        {
+                            socialMediaViewModel.FacebookAccountId = profile.Id;
+                            socialMediaViewModel.FacebookAccountName = profile.Name;
+                            socialMediaViewModel.FacebookAccountImg = profile.Image;
+                        }
                     }
 
-                    //if (account.Type == "Instagram")
-                    //{
-                    //    var instagram = GetInstagramAccountAsync(account.AccessToken);
-                    //}
+                    if (account.Type == "Instagram")
+                    {
+                        Profile profile = await GetInstagramAccountAsync(account.AccessToken);
+                        if(profile != null) { 
+                        socialMediaViewModel.InstagramAccountId = profile.Id;
+                        socialMediaViewModel.InstagramAccountName = profile.Name;
+
+                        if (profile.Name != null && profile.Name != "")
+                        {
+
+                                string img = await _socialMediaRepository.GetInstagramAccountImageAsync(profile.Name);
+                                if (img != null)
+                                {
+                                    socialMediaViewModel.InstagramAccountImg = img;
+                                }
+                                else { 
+                                socialMediaViewModel.InstagramAccountImg = "";
+                                }
+
+                            }
+                        }
+
+                    }
 
                 }
-
-                socialMediaViewModel.InstagramAccountImg = "";
-                //socialMediaViewModel.FacebookAccountImg = "";
 
             }
             else 
@@ -156,12 +174,11 @@ namespace Sohi.Web.Controllers
         }
 
 
-        public async Task<string> GetInstagramAccountAsync(string accesstoken)
+        public async Task<Profile> GetInstagramAccountAsync(string accesstoken)
         {
-            string result = await _socialMediaRepository.GetInstagramAccountAsync(accesstoken);
+            Profile profile = await _socialMediaRepository.GetInstagramAccountAsync(accesstoken);
 
-
-            return "";
+            return profile;
         }
 
         public async Task<Profile> GetFacebookAccountAsync(string accesstoken)
