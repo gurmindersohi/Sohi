@@ -40,6 +40,8 @@
     <Folder Include="Models\Account\" />
     <Folder Include="Views\Settings\" />
     <Folder Include="Controllers\Api\" />
+    <Folder Include="Views\Websites\" />
+    <Folder Include="Views\Websites\DCProjects\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />

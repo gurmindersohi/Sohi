@@ -52,9 +52,9 @@ namespace Sohi.Web.Controllers
             //var model = _leadsRepository.GetAllLeads("1").Select(e =>{e.EncryptedId = protector.Protect(e.Id.ToString()); return e;});
         }
 
-        public ViewResult Details(string? id)
+        public async Task<ViewResult> Details(Guid id)
         {
-            Lead lead = _leadsRepository.GetLead(id);
+            Lead lead = await _leadsRepository.GetLeadById(id);
             if (lead == null) {
                 Response.StatusCode = 404;
                 return View("NotFound", id);

@@ -28,7 +28,7 @@
         @foreach (var lead in Model)
         {
         <tr>
-            <td>@lead.FullName</td>
+            <td><a asp-controller="Leads" asp-action="Details" asp-route-id="@lead.LeadId" >@lead.FullName</a></td>
             <td>@lead.Email</td>
             <td>@lead.PrimaryPhone</td>
             <td>@lead.DateOfBirth</td>

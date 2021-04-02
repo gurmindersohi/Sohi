@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Models/Leads/LeadsRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Account/ChangePassword.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/Api/LeadsController.cs" Line="71" Column="63" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/ILeadsRepository.cs" Line="19" Column="20" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/LeadsRepository.cs" Line="32" Column="19" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/Leads/Lead.cs" Line="1" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/Account/AccountRepository.cs" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/LeadsController.cs" Line="56" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Leads/Index.cshtml" Line="65" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Settings.cshtml" Line="62" Column="15" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Leads/Details.cshtml" Line="58" Column="2" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Settings/Index.cshtml" Line="18" Column="9" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Account/ChangePassword.cshtml" Line="34" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,15 +15,21 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="Api" expanded="True" />
-                </Node>
+                <Node name="Controllers" expanded="True" />
                 <Node name="Models" expanded="True">
-                  <Node name="Account" expanded="True" />
-                  <Node name="Leads" expanded="True">
-                    <Node name="LeadsRepository.cs" selected="True" />
+                  <Node name="Leads" expanded="True" />
+                </Node>
+                <Node name="Views" expanded="True">
+                  <Node name="Account" expanded="True">
+                    <Node name="ChangePassword.cshtml" selected="True" />
                   </Node>
-                  <Node name="SocialMedia" expanded="True" />
+                  <Node name="Leads" expanded="True" />
+                  <Node name="Marketing" expanded="True" />
+                  <Node name="Settings" expanded="True" />
+                  <Node name="Shared" expanded="True" />
+                </Node>
+                <Node name="wwwroot" expanded="True">
+                  <Node name="images" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -37,7 +45,6 @@
     <BreakpointStore>
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/TestController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/TestController.cs" line="17" column="1" />
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" line="16" column="1" />
-      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/Api/LeadsController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/Api/LeadsController.cs" line="63" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
