@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sohi.Web.Models.Leads
 {
@@ -23,9 +24,13 @@ namespace Sohi.Web.Models.Leads
 
         }
 
-        public Task<Lead> CreateLead(Lead lead)
+        public async Task<Lead> CreateLead(Lead lead)
         {
-            throw new NotImplementedException();
+            var result = await context.Leads.AddAsync(lead);
+
+            await context.SaveChangesAsync();
+
+            return result.Entity;
         }
 
         public Lead Delete(string id, string accountid)
@@ -49,9 +54,9 @@ namespace Sohi.Web.Models.Leads
             throw new NotImplementedException();
         }
 
-        public Task<Lead> GetLeadById(Guid id)
+        public async Task<Lead> GetLeadById(Guid id)
         {
-            throw new NotImplementedException();
+            return await context.Leads.FirstOrDefaultAsync(l => l.LeadId == id);
         }
 
         public Lead Update(Lead user)
@@ -68,6 +73,9 @@ namespace Sohi.Web.Models.Leads
 
             leads = context.Leads.Where(a => a.AccountId == id).ToList();
             return leads;
+
+            //return await context.Leads.Where(a => a.LeadId == id).ToListAsync();
+
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sohi.Web.Models.Leads;
@@ -10,10 +11,11 @@ using Sohi.Web.Models.Leads;
 
 namespace Sohi.Web.Controllers.Api
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
-    [ApiController]
-    public class LeadsController : ControllerBase
+    public class LeadsController : Controller
     {
+
         private readonly ILeadsRepository _leadRepository;
 
         public LeadsController(ILeadsRepository leadsRepository)
@@ -21,28 +23,32 @@ namespace Sohi.Web.Controllers.Api
             this._leadRepository = leadsRepository;
         }
 
-        [HttpGet("{accountid:Guid}")]
-        public ActionResult GetEmployees(string accountid)
-        {
-            try
-            {
-                return Ok( _leadRepository.GetAllLeads(accountid));
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error retrieving data from the database");
-            }
-        }
 
-        [HttpGet("{id:Guid}")]
+        //[HttpGet("{GetAllLeads}/{accountid}")]
+        //public ActionResult GetAllLeads(string accountid)
+        //{
+        //    try
+        //    {
+        //        return Ok(_leadRepository.GetAllLeads(accountid));
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return StatusCode(StatusCodes.Status500InternalServerError,
+        //            "Error retrieving data from the database");
+        //    }
+        //}
+
+        [HttpGet("{Lead}/{id:Guid}")]
         public async Task<ActionResult<Lead>> GetLead(Guid id)
         {
             try
             {
                 var result = await _leadRepository.GetLeadById(id);
 
-                if (result == null) return NotFound();
+                if (result == null)
+                {
+                    return NotFound();
+                }
 
                 return result;
             }
@@ -52,19 +58,22 @@ namespace Sohi.Web.Controllers.Api
             }
         }
 
-        [HttpPost]
+        [HttpPost("{CreateLead}")]
         public async Task<ActionResult<Lead>> CreateLead(Lead lead)
         {
             try
             {
                 if (lead == null)
-                { 
+                {
                     return BadRequest();
                 }
 
                 var createdLead = await _leadRepository.CreateLead(lead);
 
-                return CreatedAtAction(nameof(GetLead), new { id = createdLead.LeadId }, createdLead);
+                return StatusCode(StatusCodes.Status200OK, "Success");
+
+                //return CreatedAtAction(nameof(GetLead), new { id = createdLead.LeadId }, createdLead);
+
             }
             catch (Exception)
             {
@@ -73,3 +82,4 @@ namespace Sohi.Web.Controllers.Api
         }
     }
 }
+
