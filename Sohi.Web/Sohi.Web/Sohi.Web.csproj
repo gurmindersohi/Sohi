@@ -42,6 +42,11 @@
     <Folder Include="Controllers\Api\" />
     <Folder Include="Views\Websites\" />
     <Folder Include="Views\Websites\DCProjects\" />
+    <Folder Include="Controllers\Marketing\" />
+    <Folder Include="Controllers\Marketing\Social\" />
+    <Folder Include="Views\Marketing\Social\" />
+    <Folder Include="Views\Marketing\Social\Instagram\" />
+    <Folder Include="Views\Marketing\Social\Facebook\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />

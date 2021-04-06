@@ -15,13 +15,13 @@ using Sohi.Web.ViewModels;
 
 namespace Sohi.Web.Controllers
 {
-    public class MarketingController : Controller
+    public class MarketingsController : Controller
     {
 
         private readonly ISocialMediaRepository _socialMediaRepository;
         private readonly UserManager<User> userManager;
 
-        public MarketingController(ISocialMediaRepository socialMediaRepository, UserManager<User> userManager)
+        public MarketingsController(ISocialMediaRepository socialMediaRepository, UserManager<User> userManager)
         {
             _socialMediaRepository = socialMediaRepository;
             this.userManager = userManager;
@@ -79,6 +79,67 @@ namespace Sohi.Web.Controllers
 
             }
             else 
+            {
+                string abc = "error";
+            }
+
+
+            return View(socialMediaViewModel);
+        }
+
+        public async Task<IActionResult> Create()
+        {
+            List<SocialMedia> socialMedia = await GetTokenAsync();
+
+            SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+
+            string instaimg = "";
+
+            if (socialMedia != null)
+            {
+                foreach (var account in socialMedia)
+                {
+                    if (account.Type == "Facebook")
+                    {
+                        Profile profile = await GetFacebookAccountAsync(account.AccessToken);
+                        if (profile != null)
+                        {
+                            socialMediaViewModel.FacebookAccountId = profile.Id;
+                            socialMediaViewModel.FacebookAccountName = profile.Name;
+                            socialMediaViewModel.FacebookAccountImg = profile.Image;
+                        }
+                    }
+
+                    if (account.Type == "Instagram")
+                    {
+                        Profile profile = await GetInstagramAccountAsync(account.AccessToken);
+                        if (profile != null)
+                        {
+                            socialMediaViewModel.InstagramAccountId = profile.Id;
+                            socialMediaViewModel.InstagramAccountName = profile.Name;
+
+                            if (profile.Name != null && profile.Name != "")
+                            {
+
+                                string img = await _socialMediaRepository.GetInstagramAccountImageAsync(profile.Name);
+                                if (img != null)
+                                {
+                                    socialMediaViewModel.InstagramAccountImg = img;
+                                }
+                                else
+                                {
+                                    socialMediaViewModel.InstagramAccountImg = "";
+                                }
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+            else
             {
                 string abc = "error";
             }

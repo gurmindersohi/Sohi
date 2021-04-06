@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "Social";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs" id="tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">Queue</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Posts</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Address-tab" data-bs-toggle="tab" data-bs-target="#Address" type="button" role="tab" aria-controls="Address" aria-selected="false">Analytics</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="@Html.ActionLink("Section1", "Send", "Email",null, new {@class="ajaxLink"})">Test</a>
+                <button class="nav-link" id="Actions-tab" data-bs-toggle="tab" data-bs-target="#Actions" type="button" role="tab" aria-controls="Actions" aria-selected="false">Drafts</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="TabContent">
+            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+
+
+            </div>
+
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            </div>
+
+            <div class="tab-pane fade" id="Address" role="tabpanel" aria-labelledby="Address-tab">
+
+            </div>
+
+            <div class="tab-pane fade" id="Actions" role="tabpanel" aria-labelledby="Actions-tab">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    th, td {
+        border-bottom-width: 0px !important;
+    }
+
+    .nav-tabs .nav-link {
+        border: none;
+    }
+
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            color: #0B90FF !important;
+            border: none;
+            border-bottom: 1px solid #0B90FF !important;
+        }
+</style>
