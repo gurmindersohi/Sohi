@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -250,11 +251,6 @@ namespace Sohi.Web.Controllers
         }
 
 
-        //public async Task<Profile> Post(string accesstoken)
-        //{
-
-
-        //}
 
 
     }

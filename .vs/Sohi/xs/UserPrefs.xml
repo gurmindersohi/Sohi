@@ -1,12 +1,7 @@
-﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Marketing/Social/Instagram/Queue.cshtml">
+﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/Marketing/Social/InstagramController.cs" Line="17" Column="12" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Instagram/Queue.cshtml" Line="19" Column="61" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Social.cshtml" Line="14" Column="43" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Leads/Details.cshtml" Line="210" Column="13" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/_ViewStart.cshtml" Line="4" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/EmailController.cs" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="19" Column="69" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,17 +9,25 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True" />
+                <Node name="Controllers" expanded="True">
+                  <Node name="Marketing" expanded="True">
+                    <Node name="Social" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Models" expanded="True">
+                  <Node name="Leads" expanded="True" />
+                </Node>
                 <Node name="Views" expanded="True">
                   <Node name="Leads" expanded="True" />
                   <Node name="Marketing" expanded="True">
                     <Node name="Social" expanded="True">
-                      <Node name="Instagram" expanded="True">
-                        <Node name="Queue.cshtml" selected="True" />
-                      </Node>
+                      <Node name="Facebook" expanded="True" />
+                      <Node name="Instagram" expanded="True" />
                     </Node>
                   </Node>
-                  <Node name="Shared" expanded="True" />
+                  <Node name="Shared" expanded="True">
+                    <Node name="Portal.cshtml" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -33,11 +36,14 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/TestController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/TestController.cs" line="17" column="1" />
+      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" line="16" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
