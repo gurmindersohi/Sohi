@@ -1,0 +1,207 @@
+﻿
+@model SocialMediaViewModel
+
+@{
+}
+
+<style>
+    .rounded-circle {
+        border: 2px solid #fff;
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px grey;
+    }
+
+
+    .circle-f {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(44,108,128)
+    }
+
+        .circle-f::before {
+            content: "+";
+            height: 22px;
+            width: 22px;
+            font-size: 21px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: courier;
+            color: white;
+            position: relative;
+            background-color: black;
+            border-radius: 50%;
+            left: 1rem;
+            bottom: 1rem;
+        }
+
+    .success-circle {
+        border: 2px solid #fff;
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #cf1c96
+    }
+
+    .success {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(44,108,128);
+    }
+
+        .success::before {
+            content: "✔";
+            height: 15px;
+            width: 15px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: courier;
+            color: #cf1c96;
+            position: relative;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #cf1c96;
+            left: 1.4rem;
+            bottom: 2.4rem;
+        }
+
+    .name {
+        display: block;
+        margin-left: -1.10rem;
+        padding: 0 .5rem;
+        font-size: .65rem;
+        width: 70px;
+        text-align: center;
+        bottom: 0.7rem;
+        position: relative;
+        color: #323b43;
+        font-weight: bold;
+    }
+</style>
+
+<form method="post">
+
+    <div class="container-fluid mt-3" style="background-color:#f8f9fa !important; height: calc(100vh - 0px);">
+
+
+
+        <div class="row" style="width:100%;">
+            <div class="col-md-10"></div>
+
+
+            <div class="col-md-1" style="display:inherit;">
+                @if (Model.InstagramAccountId != null && Model.InstagramAccountName != null)
+                {
+                    <a class="nav-link active" aria-current="page" style="padding: 0.5rem 0.5rem;">
+                        <img src="@Model.InstagramAccountImg" class="success-circle" width="35" height="35" />
+                        <span class="success"></span>
+                        <label class="name">@Model.InstagramAccountName</label>
+                    </a>
+                }
+                else
+                {
+                    <a class="nav-link active" aria-current="page" asp-controller="Marketing" asp-action="InstagramLogin" style="padding: 0.5rem 0.5rem;">
+                        <img src="/images/Insta.png" class="rounded-circle" width="35" height="35" />
+                        <span class="circle-f"></span>
+                    </a>
+                }
+                @if (Model.FacebookAccountId != null && Model.FacebookAccountName != null)
+                {
+                    <a class="nav-link active" aria-current="page" style="padding: 0.5rem 0.5rem;">
+                        <img src="@Model.FacebookAccountImg" class="success-circle" width="35" height="35" />
+                        <span class="success"></span>
+                        <label class="name">@Model.FacebookAccountName</label>
+                    </a>
+                }
+                else
+                {
+                    <a class="nav-link active" aria-current="page" asp-controller="Marketing" asp-action="FacebookLogin" style="padding: 0.5rem 0.5rem;">
+                        <img src="/images/fb.png" class="rounded-circle" width="35" height="35" />
+                        <span class="circle-f">
+                        </span>
+                    </a>
+                }
+            </div>
+            <hr />
+
+
+
+        </div>
+
+        <div class="row" style="width:100%;">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Create a post
+                    </div>
+                    <div class="card-body">
+
+                        <div class="col-md-12">
+
+
+                            <div class="form-group">
+                                <label for="uploadfile">Media</label>
+                                <input type="file" class="form-control" id="uploadfile">
+                            </div>
+
+                            <br />
+
+
+                            <div class="form-group">
+                                <label for="txtdescription">Description</label>
+                                <textarea rows="10" class="form-control" id="txtdescription"></textarea>
+                            </div>
+                            <br />
+                            @if (Model.FacebookAccountId != null && Model.FacebookAccountName != null)
+                            {
+                                <div class="form-group">
+                                    <img src="@Model.FacebookAccountImg" class="rounded-circle" width="50" height="50" />
+                                    <label>@Model.FacebookAccountName</label>
+                                </div>
+
+                                <br />
+                            }
+                            @if (Model.InstagramAccountId != null && Model.InstagramAccountName != null)
+                            {
+                                <div class="row">
+
+                                    <div class="col-md-11">
+                                        <img src="@Model.InstagramAccountImg" class="rounded-circle" width="50" height="50" />
+                                        <label>@Model.InstagramAccountName</label>
+                                    </div>
+
+                                </div>
+
+                                <br />
+                            }
+                            <button type="submit" class="btn btn-primary me-auto">Post</button>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</form>

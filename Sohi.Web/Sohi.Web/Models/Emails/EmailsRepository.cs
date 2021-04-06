@@ -51,7 +51,7 @@ namespace Sohi.Web.Models.Emails
 
             client.Port = 587;
             client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("gurminder290195@gmail.com", "suyhttmdxskvvebp");
+            client.Credentials = new NetworkCredential(email.SenderEmail, email.SenderPassword);
 
 
             client.Send(mail);

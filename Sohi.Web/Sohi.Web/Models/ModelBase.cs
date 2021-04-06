@@ -7,7 +7,7 @@ namespace Sohi.Web.Models
         public DateTime? CreatedOn { get; set; }
         public string ModifiedBy { get; set; }
         public DateTime? ModifiedOn { get; set; }
-        public bool? IsActive { get; set; }
+        public Boolean? IsActive { get; set; }
 
 
         public object Clone()

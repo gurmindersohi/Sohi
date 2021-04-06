@@ -5,7 +5,7 @@ namespace Sohi.Web.ViewModels
 {
     public class LeadsDetailsViewModel
     {
-        public Leads leads { get; set; }
+        public Lead leads { get; set; }
         public string PageTitle { get; set; }
     }
 }

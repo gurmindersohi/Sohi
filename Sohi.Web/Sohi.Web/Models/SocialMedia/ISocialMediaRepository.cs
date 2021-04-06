@@ -27,7 +27,7 @@ namespace Sohi.Web.Models.SocialMedia
 
         Task<Profile> GetFacebookAccountAsync(string accesstoken);
 
-        Task<Profile> Post(string accesstoken)
+        //Task<Profile> Post(string accesstoken)
 
     }
 }

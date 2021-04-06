@@ -44,6 +44,9 @@ namespace Sohi.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                string SenderEmail = "gurminder290195@gmail.com";
+                string SenderPassword = "suyhttmdxskvvebp";
+
                 string To = model.To;
                 string[] recievers = To.Split(',');
 
@@ -56,7 +59,9 @@ namespace Sohi.Web.Controllers
                         Cc = model.Cc,
                         Bcc = model.Bcc,
                         Subject = model.Subject,
-                        Body = model.Body
+                        Body = model.Body,
+                        SenderEmail = SenderEmail,
+                        SenderPassword = SenderPassword
                     };
 
 

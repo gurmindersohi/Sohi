@@ -17,5 +17,9 @@ namespace Sohi.Web.Models.Emails
         public string Subject { get; set; }
 
         public string Body { get; set; }
+        
+        public string SenderEmail { get; set; }
+
+        public string SenderPassword { get; set; }
     }
 }

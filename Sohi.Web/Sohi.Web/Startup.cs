@@ -59,7 +59,9 @@ namespace Sohi.Web
             services.AddScoped<IAccountRepository, AccountRepository>();
 
 
-            services.AddScoped<ILeadsRepository, MockLeadsRepository>();
+            services.AddScoped<ILeadsRepository, LeadsRepository>();
+
+            //services.AddScoped<ILeadsRepository, MockLeadsRepository>();
             services.AddScoped<IEmailsRepository, EmailsRepository>();
             //services.AddScoped<IUserRepository, SQLUserRepository>();
 

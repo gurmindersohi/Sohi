@@ -11,6 +11,7 @@ using Sohi.Web.Models.Emails;
 using System.Net.Mail;
 using System.Net;
 using Sohi.Web.Models.Account;
+using Microsoft.Extensions.Configuration;
 
 namespace Sohi.Web.Controllers
 {
@@ -19,6 +20,8 @@ namespace Sohi.Web.Controllers
 
         //private readonly IEmails _emails;
 
+        private IConfiguration _config;
+
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
@@ -26,7 +29,8 @@ namespace Sohi.Web.Controllers
         private readonly IAccountRepository _accountRepository;
 
         public AccountController(UserManager<User> userManager,
-            SignInManager<User> signInManager, IAccountRepository accountRepository, RoleManager<IdentityRole> roleManager)
+            SignInManager<User> signInManager, IAccountRepository accountRepository, RoleManager<IdentityRole> roleManager,
+            IConfiguration configuration)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -34,6 +38,7 @@ namespace Sohi.Web.Controllers
             this.roleManager = roleManager;
 
             _accountRepository = accountRepository;
+            _config = configuration;
 
         }
 
@@ -341,9 +346,13 @@ namespace Sohi.Web.Controllers
 
         public void SendEmailConfirmation(string emailTo, string subject, string body)
         {
+
+            string Email = _config.GetSection("noreplyEmailCredentials").GetSection("Email").Value;
+            string Password = _config.GetSection("noreplyEmailCredentials").GetSection("Password").Value;
+
             MailMessage mail = new MailMessage();
 
-            mail.From = new MailAddress("gurminder290195@gmail.com");
+            mail.From = new MailAddress(Email);
             mail.To.Add(emailTo);
             mail.Subject = subject;
             mail.Body = body;
@@ -353,7 +362,7 @@ namespace Sohi.Web.Controllers
 
             client.Port = 587;
             client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("gurminder290195@gmail.com", "suyhttmdxskvvebp");
+            client.Credentials = new NetworkCredential(Email, Password);
 
             client.Send(mail);
 

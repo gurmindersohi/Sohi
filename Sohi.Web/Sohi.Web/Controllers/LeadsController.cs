@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Sohi.Web.Models;
 using Sohi.Web.Models.Leads;
 using Sohi.Web.Security;
 using Sohi.Web.ViewModels;
@@ -16,26 +19,42 @@ namespace Sohi.Web.Controllers
     {
         private readonly ILeadsRepository _leadsRepository;
         private readonly IDataProtector protector;
+        private readonly UserManager<User> userManager;
 
-        public LeadsController(ILeadsRepository leadsRepository, IDataProtectionProvider dataProtectionProvider, DataProtectionPurposeStrings dataProtectionPurposeStrings)
+        public LeadsController(ILeadsRepository leadsRepository, IDataProtectionProvider dataProtectionProvider, DataProtectionPurposeStrings dataProtectionPurposeStrings,
+                               UserManager<User> userManager)
         {
             _leadsRepository = leadsRepository;
             this.protector = dataProtectionProvider.CreateProtector(dataProtectionPurposeStrings.LeadIdRouteValue);
+            this.userManager = userManager;
         }
 
-        public ViewResult Index()
+        public async Task<ViewResult> IndexAsync()
         {
             //throw new Exception("Error in Leads View");
 
-            var model = _leadsRepository.GetAllLeads("1");
+            var user = await userManager.GetUserAsync(User);
+
+            if (user != null)
+            {
+                var model = _leadsRepository.GetAllLeads(user.AccountId);
+
+                return View(model);
+
+            }
+            //else if (user == null) {
+
+            //    return View("NotFound");
+            //}
+
+                return View("NotFound");
 
             //var model = _leadsRepository.GetAllLeads("1").Select(e =>{e.EncryptedId = protector.Protect(e.Id.ToString()); return e;});
-            return View(model);
         }
 
-        public ViewResult Details(string? id)
+        public async Task<ViewResult> Details(Guid id)
         {
-            Leads lead = _leadsRepository.GetLead(id);
+            Lead lead = await _leadsRepository.GetLeadById(id);
             if (lead == null) {
                 Response.StatusCode = 404;
                 return View("NotFound", id);
@@ -79,6 +98,7 @@ namespace Sohi.Web.Controllers
 
             return View("../Email/Send", emailsViewModel);
         }
+
 
     }
 }
