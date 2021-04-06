@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = "Social";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs" id="tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" asp-controller="Instagram" asp-action="Queue">Queue</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" asp-controller="Instagram" asp-action="Posts"> Post Test</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Address-tab" data-bs-toggle="tab" data-bs-target="#Address" type="button" role="tab" aria-controls="Address" aria-selected="false">Analytics</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Actions-tab" data-bs-toggle="tab" data-bs-target="#Actions" type="button" role="tab" aria-controls="Actions" aria-selected="false">Drafts</button>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+<style>
+    th, td {
+        border-bottom-width: 0px !important;
+    }
+
+    .nav-tabs .nav-link {
+        border: none;
+    }
+
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            color: #0B90FF !important;
+            border: none;
+            background-color:none!important;
+            border-bottom: 1px solid #0B90FF !important;
+        }
+</style>
+
+
+    <script>
+            $('.nav li').click(function () {
+
+                $(this).toggleClass('active').siblings().removeClass('active');
+
+
+            });
+        </script>
+
+
+
+<style>
+    .nav > li.active > a {
+        color: #0B90FF !important;
+        border: none;
+        border-bottom: 1px solid #0B90FF !important;
+    }
+    </style>

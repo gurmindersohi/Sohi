@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,18 @@ namespace Sohi.Web.Controllers.Marketing.Social
         //    return View();
         //}
 
+        [Route("Queue")]
         public IActionResult Queue()
         {
             return View("~/Views/Marketing/Social/Instagram/Queue.cshtml");
         }
+
+
+        [Route("Posts")]
+        public IActionResult Posts() {
+
+            return PartialView("~/Views/Marketing/Social/Instagram/Posts.cshtml");
+        }
+
     }
 }
