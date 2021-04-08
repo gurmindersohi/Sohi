@@ -127,3 +127,15 @@
     </div>
 
 </div>
+
+
+@section Scripts{
+
+
+    <script>$(document).ready(function () {
+            $("#emails").addClass("active");
+        });
+        $('.nav li').click(function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });</script>
+    }

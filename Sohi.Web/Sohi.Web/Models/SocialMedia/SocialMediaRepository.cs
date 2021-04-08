@@ -228,5 +228,58 @@ namespace Sohi.Web.Models.SocialMedia
                 return null;
             }
         }
+
+        public async Task<string> GenerateFacebookPageTokenAsync(string pageId, string userToken)
+        {
+            string version = _config.GetSection("FacebookApp").GetSection("version").Value;
+
+            string url = string.Format("https://graph.facebook.com/v" + version + "/{0}?fields=access_token&access_token={1}", pageId, userToken);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+                string token = parsedobj["access_token"].ToString();
+                return token;
+
+            }
+            else
+            {
+                return response.ReasonPhrase;
+            }
+        }
+
+        public async Task<List<Post>> GetFacebookPosts(string pageid, string pagetoken)
+        {
+            List<Post> posts = new List<Post>();
+            Post post = new Post();
+
+            string version = _config.GetSection("FacebookApp").GetSection("version").Value;
+
+            string url = string.Format("https://graph.facebook.com/v" + version + "/{0}/posts?access_token={1}", pageid, pagetoken);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+
+                foreach (var item in parsedobj["data"])
+                {
+                    post.Message = item["id"].ToString();
+
+                    posts.Add(post);
+                }
+
+                return posts;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

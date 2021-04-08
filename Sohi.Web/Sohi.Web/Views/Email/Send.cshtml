@@ -87,23 +87,23 @@
 
                             <br />
 
-                        <div class="form-group">
-                            <br />
-                            <label for="txtTo">To</label>
+                            <div class="form-group">
+                                <br />
+                                <label for="txtTo">To</label>
 
-                            @{
-                                var emails = "";
+                                @{
+                                    var emails = "";
 
-                                if (Model != null)
-                                {
-                                    emails = Model.To;
+                                    if (Model != null)
+                                    {
+                                        emails = Model.To;
+                                    }
                                 }
-                            }
 
-                            <input asp-for="To" type="text" class="form-control" id="txtTo" value="@Html.Raw(emails)" />
+                                <input asp-for="To" type="text" class="form-control" id="txtTo" value="@Html.Raw(emails)" />
 
 
-                        </div>
+                            </div>
 
                             <br />
 
@@ -155,3 +155,15 @@
     </div>
 
 </div>
+
+
+
+@section Scripts{
+
+    <script>$(document).ready(function () {
+            $("#emails").addClass("active");
+        });
+        $('.nav li').click(function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });</script>
+    }

@@ -29,5 +29,9 @@ namespace Sohi.Web.Models.SocialMedia
 
         //Task<Profile> Post(string accesstoken)
 
+        Task<string> GenerateFacebookPageTokenAsync(string pageid, string pagetoken);
+
+        Task<List<Post>> GetFacebookPosts(string PageId, string PageToken);
+
     }
 }
