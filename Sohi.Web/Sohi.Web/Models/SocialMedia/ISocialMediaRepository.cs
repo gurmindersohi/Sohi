@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Sohi.Web.ViewModels.Social.Facebook;
 
 namespace Sohi.Web.Models.SocialMedia
 {
@@ -28,6 +29,10 @@ namespace Sohi.Web.Models.SocialMedia
         Task<Profile> GetFacebookAccountAsync(string accesstoken);
 
         //Task<Profile> Post(string accesstoken)
+
+        Task<string> GenerateFacebookPageTokenAsync(string pageid, string pagetoken);
+
+        Task<List<PostsViewModel>> GetFacebookPosts(string PageId, string PageToken);
 
     }
 }

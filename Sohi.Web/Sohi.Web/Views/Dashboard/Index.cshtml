@@ -5,14 +5,25 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            
+
         </div>
         <div class="col">
             Dashboard Page
         </div>
         <div class="col">
-            
+
         </div>
     </div>
-   
+
 </div>
+
+
+
+@section Scripts{
+    <script>$(document).ready(function () {
+            $("#dashboard").addClass("active");
+        });
+        $('.nav li').click(function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });</script>
+    }

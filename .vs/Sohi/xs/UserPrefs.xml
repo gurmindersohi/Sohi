@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/ViewModels/Social/Facebook/PostsViewModel.cs">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="19" Column="69" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/Marketing/Social/FacebookController.cs" Line="95" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs" Line="21" Column="59" />
+      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" Line="280" Column="22" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/Posts.cshtml" Line="35" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/ViewModels/Social/Facebook/PostsViewModel.cs" Line="12" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,18 +20,29 @@
                 </Node>
                 <Node name="Models" expanded="True">
                   <Node name="Leads" expanded="True" />
+                  <Node name="SocialMedia" expanded="True" />
+                </Node>
+                <Node name="ViewModels" expanded="True">
+                  <Node name="Social" expanded="True">
+                    <Node name="Facebook" expanded="True">
+                      <Node name="PostsViewModel.cs" selected="True" />
+                    </Node>
+                  </Node>
                 </Node>
                 <Node name="Views" expanded="True">
+                  <Node name="Account" expanded="True" />
                   <Node name="Leads" expanded="True" />
                   <Node name="Marketing" expanded="True">
                     <Node name="Social" expanded="True">
                       <Node name="Facebook" expanded="True" />
-                      <Node name="Instagram" expanded="True" />
                     </Node>
                   </Node>
-                  <Node name="Shared" expanded="True">
-                    <Node name="Portal.cshtml" selected="True" />
-                  </Node>
+                  <Node name="Reports" expanded="True" />
+                  <Node name="Settings" expanded="True" />
+                  <Node name="Shared" expanded="True" />
+                </Node>
+                <Node name="wwwroot" expanded="True">
+                  <Node name="images" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -43,6 +58,7 @@
     <BreakpointStore>
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/TestController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/TestController.cs" line="17" column="1" />
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" line="16" column="1" />
+      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" relfile="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" line="47" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

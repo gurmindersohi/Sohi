@@ -1,0 +1,92 @@
+﻿
+<style>
+    .ConnectBox {
+        appearance: none;
+        -webkit-box-align: center;
+        align-items: center;
+        color: rgb(119, 121, 122);
+        cursor: pointer;
+        display: flex;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        flex: 0 0 auto;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        min-width: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        position: relative;
+        transition-property: background-color, border-color, color;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in;
+        user-select: none;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 4px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+        height: 190px;
+        border: 1px solid rgb(184, 184, 184);
+    }
+    .InsideConnectBox {
+        padding: 1rem;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .header {
+        color: rgb(61, 61, 61);
+        font-family: Roboto, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 44px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .btnConnect {
+        color: rgb(61, 61, 61);
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+</style>
+
+<div class="conatiner pt-5">
+    <div class="row text-center">
+        <div class="col-md-12 p-3 header">
+            Connect a new account
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center pt-4">
+        <a class="col-md-2 btn" asp-action="InstagramLogin" asp-controller="Connect">
+                <div class="ConnectBox">
+                    <div class="InsideConnectBox">
+                        <img src="/images/Insta.png" class="rounded-circle" width="35" height="35" />
+                        <h5 class="btnConnect">Instagram</h5>
+                        <span>Business Account</span>
+                        <span>Connect</span>
+
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 btn" asp-action="FacebookLogin" asp-controller="Connect">
+                <div class="ConnectBox">
+                    <div class="InsideConnectBox">
+                        <img src="/images/Fb.png" class="rounded-circle" width="35" height="35" />
+                        <h5 class="btnConnect">Facebook</h5>
+                        <span>Page</span>
+                        <span>Connect</span>
+
+                    </div>
+                </div>
+            </a>
+    </div>
+</div>

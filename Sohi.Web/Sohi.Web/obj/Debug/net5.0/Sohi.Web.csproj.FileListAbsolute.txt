@@ -930,3 +930,4 @@ C:/Users/gurmi/source/repos/gurmindersingh751/Sohi/Sohi.Web/Sohi.Web/obj/Debug/n
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Instagram/Posts.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Facebook/Posts.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Facebook/Queue.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Connect.cshtml.g.cs

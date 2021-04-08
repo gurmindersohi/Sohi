@@ -11,15 +11,38 @@
 </head>
 <body>
     <div>
-        <div class="container p-3" style="border-bottom: 1px solid #0B90FF !important;">
-            <div class="row">
+        <div class="container-fluid">
+            <div class="row  p-3" style="border-bottom: 1px solid #dee2e6 !important;">
                 <div class="col-md-5">
                     @*<label style="color: #323b43; font-size: 1.5rem;">Publishing</label>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 28 28" class="o--icon--sm u--m__lr__sm qa--page__headerIcon"><path fill-rule="evenodd" d="M8.488 26.513c-.65-.65-.65-1.625 0-2.275L18.726 14 8.488 3.763c-.65-.65-.65-1.625 0-2.275.65-.65 1.625-.65 2.275 0l11.375 11.375c.65.65.65 1.625 0 2.275L10.763 26.513A1.755 1.755 0 019.626 27c-.325 0-.813-.162-1.138-.487z"></path></svg>*@
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 28 28" class="o--icon--sm u--m__lr__sm qa--page__headerIcon"><path fill-rule="evenodd" d="M8.488 26.513c-.65-.65-.65-1.625 0-2.275L18.726 14 8.488 3.763c-.65-.65-.65-1.625 0-2.275.65-.65 1.625-.65 2.275 0l11.375 11.375c.65.65.65 1.625 0 2.275L10.763 26.513A1.755 1.755 0 019.626 27c-.325 0-.813-.162-1.138-.487z"></path></svg>*@
 
-                    <label style="color: #323b43; font-size: 1.5rem;">Instagram</label>
+                    <label style="color: #323b43; font-size: 1.5rem;">Facebook</label>
+
                 </div>
             </div>
+
+            <div class="row p-3">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs" id="tabs" role="tablist">
+                        <li class="nav-item" role="presentation" id="queue">
+                            <a class="nav-link" asp-controller="Facebook" asp-action="Queue">Queue</a>
+                        </li>
+                        <li class="nav-item" role="presentation" id="posts">
+                            <a class="nav-link" asp-controller="Facebook" asp-action="Posts">Posts</a>
+                        </li>
+                        <li class="nav-item" role="presentation" id="posts">
+                            <a class="nav-link" asp-controller="Facebook" asp-action="Posts">Analytics</a>
+                        </li>
+                        <li class="nav-item" role="presentation" id="posts">
+                            <a class="nav-link" asp-controller="Facebook" asp-action="Posts">Drafts</a>
+                        </li>
+                      
+                    </ul>
+
+                </div>
+            </div>
+
         </div>
         @RenderBody()
     </div>
@@ -31,6 +54,25 @@
             color: #0B90FF !important;
             border: none;
             border-bottom: 1px solid #0B90FF !important;
+            background: none;
+        }
+
+        .nav > li > a:hover {
+            color: #0B90FF !important;
+            border: none !important;
+            border-bottom: 1px solid #0B90FF !important;
+        }
+
+        .active {
+
+            border:none!important;
+        }
+
+        .nav-tabs .nav-link {
+            margin-bottom: -1px;
+            background: none;
+            border: none !important;
+            font-size: 14px;
         }
     </style>
 
