@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
+using Sohi.Web.ViewModels.Social.Facebook;
 
 namespace Sohi.Web.Models.SocialMedia
 {
@@ -25,17 +26,17 @@ namespace Sohi.Web.Models.SocialMedia
             _config = configuration;
             this.context = context;
         }
-       
+
         public async Task<string> GenerateInstagramTokenAsync(string code)
         {
-                string client_id = _config.GetSection("InstagramApp").GetSection("ClientId").Value;
-                string client_secret = _config.GetSection("InstagramApp").GetSection("ClientSecret").Value;
-                string grant_type = _config.GetSection("InstagramApp").GetSection("grant_type").Value;
-                string redirect_uri = _config.GetSection("InstagramApp").GetSection("RedirectURL").Value;
+            string client_id = _config.GetSection("InstagramApp").GetSection("ClientId").Value;
+            string client_secret = _config.GetSection("InstagramApp").GetSection("ClientSecret").Value;
+            string grant_type = _config.GetSection("InstagramApp").GetSection("grant_type").Value;
+            string redirect_uri = _config.GetSection("InstagramApp").GetSection("RedirectURL").Value;
 
-                string url = string.Format("https://api.instagram.com/oauth/access_token?");
+            string url = string.Format("https://api.instagram.com/oauth/access_token?");
 
-                var values = new Dictionary<string, string>{
+            var values = new Dictionary<string, string>{
                   { "client_id", client_id },
                   { "client_secret", client_secret },
                   { "grant_type", grant_type },
@@ -43,9 +44,9 @@ namespace Sohi.Web.Models.SocialMedia
                   { "code", code },
                 };
 
-                var content = new FormUrlEncodedContent(values);
+            var content = new FormUrlEncodedContent(values);
 
-                var response = await client.PostAsync(url, content);
+            var response = await client.PostAsync(url, content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -56,7 +57,8 @@ namespace Sohi.Web.Models.SocialMedia
                 return token;
 
             }
-            else {
+            else
+            {
                 return response.StatusCode.ToString();
             }
 
@@ -139,8 +141,8 @@ namespace Sohi.Web.Models.SocialMedia
 
             List<SocialMedia> accounts = new List<SocialMedia>();
 
-                accounts = context.SocialMediaAccounts.Where(a => a.AccountId == accountid).ToList();
-                return accounts;
+            accounts = context.SocialMediaAccounts.Where(a => a.AccountId == accountid).ToList();
+            return accounts;
 
 
         }
@@ -179,7 +181,7 @@ namespace Sohi.Web.Models.SocialMedia
         {
             Profile profile = new Profile();
             string url = string.Format("https://graph.instagram.com/me?fields=id,username&access_token={0}", accesstoken);
-           
+
             var response = await client.GetAsync(url);
 
             if (response.IsSuccessStatusCode)
@@ -216,7 +218,8 @@ namespace Sohi.Web.Models.SocialMedia
                     return img;
 
                 }
-                catch (JsonReaderException ex) {
+                catch (JsonReaderException ex)
+                {
                     return ex.Message;
 
                 }
@@ -251,14 +254,13 @@ namespace Sohi.Web.Models.SocialMedia
             }
         }
 
-        public async Task<List<Post>> GetFacebookPosts(string pageid, string pagetoken)
+        public async Task<List<PostsViewModel>> GetFacebookPosts(string pageid, string pagetoken)
         {
-            List<Post> posts = new List<Post>();
-            Post post = new Post();
+            List<PostsViewModel> posts = new List<PostsViewModel>();
 
             string version = _config.GetSection("FacebookApp").GetSection("version").Value;
 
-            string url = string.Format("https://graph.facebook.com/v" + version + "/{0}/posts?access_token={1}", pageid, pagetoken);
+            string url = string.Format("https://graph.facebook.com/v" + version + "/{0}/posts?fields=id,full_picture,message,created_time,admin_creator&access_token={1}", pageid, pagetoken);
 
             var response = await client.GetAsync(url);
 
@@ -269,7 +271,22 @@ namespace Sohi.Web.Models.SocialMedia
 
                 foreach (var item in parsedobj["data"])
                 {
-                    post.Message = item["id"].ToString();
+                    PostsViewModel post = new PostsViewModel();
+
+                    post.Id = item["id"].ToString();
+                    post.Picture = item["full_picture"].ToString();
+
+                    if (item["message"] != null)
+                    {
+                        post.Description = item["message"].ToString();
+                    }
+
+                    string publishedBy = item["admin_creator"]["name"].ToString();
+                    var time = Convert.ToDateTime(item["created_time"].ToString());
+                    var createdBy = "Published by " + publishedBy + " on " + time.ToString("MMMM") + " " + time.Day.ToString() + ", " + time.Year.ToString()  + " at " + time.ToString("hh") + ":" + time.Minute.ToString() + " " + time.ToString("tt"); ;
+                    post.CreatedTime = createdBy;
+
+
 
                     posts.Add(post);
                 }

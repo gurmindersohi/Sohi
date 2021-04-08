@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Sohi.Web.Models;
 using Sohi.Web.Models.SocialMedia;
+using Sohi.Web.ViewModels.Social.Facebook;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -43,6 +44,8 @@ namespace Sohi.Web.Controllers.Marketing.Social
 
             List<SocialMedia> socialMedia = await GetTokenAsync();
 
+            List<PostsViewModel> posts = new List<PostsViewModel>();
+
             if (socialMedia != null)
             {
                 foreach (var account in socialMedia)
@@ -52,7 +55,7 @@ namespace Sohi.Web.Controllers.Marketing.Social
                         string pageid = "102420827994118";
                         var pagetoken = await _socialMediaRepository.GenerateFacebookPageTokenAsync(pageid, account.AccessToken);
 
-                        var posts = GetFacebookPosts(pageid, pagetoken);
+                        posts = await GetFacebookPosts(pageid, pagetoken);
 
                     }
                 }
@@ -64,7 +67,7 @@ namespace Sohi.Web.Controllers.Marketing.Social
             }
 
 
-            return PartialView("~/Views/Marketing/Social/Facebook/Posts.cshtml");
+            return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", posts);
         }
 
         [HttpGet]
@@ -84,10 +87,10 @@ namespace Sohi.Web.Controllers.Marketing.Social
         }
 
         [HttpGet]
-        public async Task<List<Post>> GetFacebookPosts(string pageid, string pagetoken)
+        public async Task<List<PostsViewModel>> GetFacebookPosts(string pageid, string pagetoken)
         {
 
-            List<Post> posts = posts = await _socialMediaRepository.GetFacebookPosts(pageid, pagetoken);
+            List<PostsViewModel> posts = posts = await _socialMediaRepository.GetFacebookPosts(pageid, pagetoken);
 
             return posts;
 
