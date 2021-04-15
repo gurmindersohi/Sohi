@@ -736,24 +736,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/gurmindersingh/.nuget/packages/": {}
+    "C:\\Users\\gurmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj",
+      "projectUniqueName": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj",
       "projectName": "Sohi.Websites",
-      "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj",
-      "packagesPath": "/Users/gurmindersingh/.nuget/packages/",
-      "outputPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/",
+      "projectPath": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj",
+      "packagesPath": "C:\\Users\\gurmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gurmindersingh/.config/NuGet/NuGet.Config"
+        "C:\\Users\\gurmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -795,7 +797,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

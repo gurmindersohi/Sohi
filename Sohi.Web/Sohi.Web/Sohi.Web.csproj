@@ -21,7 +21,6 @@
     <Folder Include="wwwroot\js\" />
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\" />
@@ -35,7 +34,6 @@
     <Folder Include="Security\" />
     <Folder Include="Models\Emails\" />
     <Folder Include="wwwroot\images\" />
-    <Folder Include="Views\Email\" />
     <Folder Include="Models\SocialMedia\" />
     <Folder Include="Models\Account\" />
     <Folder Include="Views\Settings\" />
@@ -60,6 +58,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.4" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.8.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
   <ItemGroup>

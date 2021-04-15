@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sohi.Web",
+    "\\Sohi.Web\\Sohi.Web",
+    "\\Sohi.Web\\Sohi.Web\\Views",
+    "\\Sohi.Web\\Sohi.Web\\Views\\Email",
+    "\\Sohi.Web\\Sohi.Web\\Views\\Marketing",
+    "\\Sohi.Web\\Sohi.Web\\Views\\Marketing\\Social",
+    "\\Sohi.Web\\Sohi.Web\\Views\\Marketing\\Social\\Facebook"
   ],
+  "SelectedNode": "\\Sohi.Web\\Sohi.Web\\Views\\Email",
   "PreviewInSolutionExplorer": false
 }
