@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/ViewModels/Social/Facebook/PostsViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/Posts.cshtml">
     <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Controllers/Marketing/Social/FacebookController.cs" Line="95" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/ISocialMediaRepository.cs" Line="21" Column="59" />
-      <File FileName="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" Line="280" Column="22" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/Posts.cshtml" Line="35" Column="1" />
-      <File FileName="Sohi.Web/Sohi.Web/ViewModels/Social/Facebook/PostsViewModel.cs" Line="12" Column="30" />
+      <File FileName="Sohi.Web/Sohi.Web/Controllers/EmailController.cs" Line="1" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Email/Index.cshtml" Line="10" Column="35" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Email/Send.cshtml" Line="17" Column="28" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Email/_Common.cshtml" Line="3" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/_Common.cshtml" Line="3" Column="1" />
+      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/Posts.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,53 +14,42 @@
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="Marketing" expanded="True">
-                    <Node name="Social" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Models" expanded="True">
-                  <Node name="Leads" expanded="True" />
-                  <Node name="SocialMedia" expanded="True" />
-                </Node>
-                <Node name="ViewModels" expanded="True">
-                  <Node name="Social" expanded="True">
-                    <Node name="Facebook" expanded="True">
-                      <Node name="PostsViewModel.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
+                <Node name="Controllers" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Account" expanded="True" />
-                  <Node name="Leads" expanded="True" />
+                  <Node name="Email" expanded="True" />
                   <Node name="Marketing" expanded="True">
                     <Node name="Social" expanded="True">
-                      <Node name="Facebook" expanded="True" />
+                      <Node name="Facebook" expanded="True">
+                        <Node name="Posts.cshtml" selected="True" />
+                      </Node>
                     </Node>
                   </Node>
-                  <Node name="Reports" expanded="True" />
-                  <Node name="Settings" expanded="True" />
-                  <Node name="Shared" expanded="True" />
-                </Node>
-                <Node name="wwwroot" expanded="True">
-                  <Node name="images" expanded="True" />
                 </Node>
               </Node>
             </Node>
+            <Node name="Sohi.Websites" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Sohi.Web.Sohi.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Sohi.Websites.Sohi.Websites PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/TestController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/TestController.cs" line="17" column="1" />
       <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" relfile="Sohi.Web/Sohi.Web/Controllers/Api/MyApiController.cs" line="16" column="1" />
-      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" relfile="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" line="47" column="1" />
+      <Breakpoint file="/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" relfile="Sohi.Web/Sohi.Web/Models/SocialMedia/SocialMediaRepository.cs" line="319" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{5E802A19-6405-4791-88A8-CF40DFDD1762}" ItemName="Sohi.Web" ConfigurationId="Default" />
+        <StartupItem ItemId="{A8E5B78B-65F0-4098-8706-78EA04D5162B}" ItemName="Sohi.Websites" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
 </Properties>

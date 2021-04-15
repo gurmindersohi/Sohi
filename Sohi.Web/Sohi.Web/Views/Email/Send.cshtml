@@ -1,7 +1,12 @@
 ﻿@model SendEmailViewModel
 
+
+
 @{
+    Layout = "~/Views/Email/_Common.cshtml";
 }
+
+
 <style>
     .rounded-circle {
         border: 1px solid #bbcbda;
@@ -166,4 +171,4 @@
         $('.nav li').click(function () {
             $(this).toggleClass('active').siblings().removeClass('active');
         });</script>
-    }
+}

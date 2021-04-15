@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Sohi.Web.Models;
+using Sohi.Web.Models.Azure;
 using Sohi.Web.Models.SocialMedia;
 using Sohi.Web.ViewModels.Social.Facebook;
 
@@ -17,18 +18,28 @@ namespace Sohi.Web.Controllers.Marketing.Social
     public class FacebookController : Controller
     {
 
+        //CloudStorageAccount
+
+        //private string token { set; get; }
+
         private readonly ISocialMediaRepository _socialMediaRepository;
         private readonly UserManager<User> userManager;
+        private readonly IBlobRepository _blobRepository;
 
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-        public FacebookController(ISocialMediaRepository socialMediaRepository, UserManager<User> userManager)
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
+
+        public FacebookController(ISocialMediaRepository socialMediaRepository, UserManager<User> userManager, IBlobRepository BlobRepository)
         {
             this.userManager = userManager;
             _socialMediaRepository = socialMediaRepository;
+            _blobRepository = BlobRepository;
+
         }
 
         [Route("Queue")]
@@ -44,6 +55,7 @@ namespace Sohi.Web.Controllers.Marketing.Social
 
             List<SocialMedia> socialMedia = await GetTokenAsync();
 
+
             List<PostsViewModel> posts = new List<PostsViewModel>();
 
             if (socialMedia != null)
@@ -52,6 +64,7 @@ namespace Sohi.Web.Controllers.Marketing.Social
                 {
                     if (account.Type == "Facebook")
                     {
+                        await GetFacebookPages(account.AccessToken);
                         string pageid = "102420827994118";
                         var pagetoken = await _socialMediaRepository.GenerateFacebookPageTokenAsync(pageid, account.AccessToken);
 
@@ -95,6 +108,45 @@ namespace Sohi.Web.Controllers.Marketing.Social
             return posts;
 
         }
+
+
+        [HttpGet]
+        public async Task<List<Profile>> GetFacebookPages(string accesstoken)
+        {
+
+            List<Profile> pages = await _socialMediaRepository.GetFacebookPages(accesstoken);
+
+            return pages;
+
+        }
+
+
+        [HttpGet]
+        [Route("ListBlobs")]
+        public async Task<IActionResult> ListBlobs()
+        {
+
+            return Ok(await _blobRepository.ListBlobsAsync());
+
+        }
+
+
+
+        //[Route("Share")]
+        //[HttpPost]
+        //public async Task<IActionResult> ShareAsync(PostCreateViewModel postCreateViewModel)
+        //{
+
+        //    if (ModelState.IsValid)
+        //    {
+
+        //        postCreateViewModel.File.
+
+        //    }
+
+
+        //    return View("~/Views/Marketing/Social/Facebook/Posts.cshtml");
+        //}
 
     }
 }
