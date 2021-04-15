@@ -34,5 +34,7 @@ namespace Sohi.Web.Models.SocialMedia
 
         Task<List<PostsViewModel>> GetFacebookPosts(string PageId, string PageToken);
 
+        Task<List<Profile>> GetFacebookPages(string accesstoken);
+
     }
 }
