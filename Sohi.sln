@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sohi.Web", "Sohi.Web", "{7A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sohi.Web", "Sohi.Web\Sohi.Web\Sohi.Web.csproj", "{5E802A19-6405-4791-88A8-CF40DFDD1762}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sohi.Websites", "Sohi.Websites", "{CA02A4E2-34F8-4B73-A1A4-12D1BBDAF74D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sohi.Websites", "Sohi.Websites\Sohi.Websites.csproj", "{A8E5B78B-65F0-4098-8706-78EA04D5162B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E802A19-6405-4791-88A8-CF40DFDD1762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E5B78B-65F0-4098-8706-78EA04D5162B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E5B78B-65F0-4098-8706-78EA04D5162B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E5B78B-65F0-4098-8706-78EA04D5162B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E5B78B-65F0-4098-8706-78EA04D5162B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E802A19-6405-4791-88A8-CF40DFDD1762} = {7A658309-ED76-45E0-BB06-B71316B4194F}
+		{A8E5B78B-65F0-4098-8706-78EA04D5162B} = {CA02A4E2-34F8-4B73-A1A4-12D1BBDAF74D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E0981D5-64FB-4360-9709-8A287D321FEA}

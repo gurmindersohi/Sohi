@@ -19,6 +19,8 @@ using Sohi.Web.Security;
 using Sohi.Web.Models.Emails;
 using Sohi.Web.Models.SocialMedia;
 using Sohi.Web.Models.Account;
+using Azure.Storage.Blobs;
+using Sohi.Web.Models.Azure;
 
 namespace Sohi.Web
 {
@@ -51,9 +53,19 @@ namespace Sohi.Web
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
 
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
+
+
+            //services.AddSingleton()
+
+            //services.AddSingleton(x: IServiceProvider => new BlobServiceClient(Configuration.GetValue<string>(KeyExtensions: "AzureBlobStorageConnectionString")));
+
+            services.AddSingleton(IServiceProvider => new BlobServiceClient(_config.GetSection("AzureStorage").GetSection("ConnectionString").Value));
+
+            services.AddScoped<IBlobRepository, BlobRepository>();
 
             services.AddScoped<ISocialMediaRepository, SocialMediaRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();

@@ -298,5 +298,41 @@ namespace Sohi.Web.Models.SocialMedia
                 return null;
             }
         }
+
+        public async Task<List<Profile>> GetFacebookPages(string accesstoken)
+        {
+            List<Profile> pages = new List<Profile>();
+
+            string version = _config.GetSection("FacebookApp").GetSection("version").Value;
+
+            string url = string.Format("https://graph.facebook.com/v" + version + "/me/accounts?fields=id,name,picture&access_token={0}&fields=id,name,about&limit=100", accesstoken);
+
+            //string facebook_EndPoint = string.Format(FacebookAPIEndpoints.GetFacebookAccounts + "?access_token={0}&fields=id,name,about&limit=100", access_token);
+
+            var response = await client.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var parsedobj = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+
+                foreach (var item in parsedobj["data"])
+                {
+                    Profile page = new Profile();
+
+                    page.Id = item["id"].ToString();
+                    page.Name = item["name"].ToString();
+                    page.Image = item["picture"]["data"]["url"].ToString();
+
+                    pages.Add(page);
+                }
+
+                return pages;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

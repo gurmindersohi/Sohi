@@ -33,6 +33,8 @@ namespace Sohi.Web.Controllers.Marketing.Social
                 {
                     if (account.Type == "Facebook")
                     {
+                        //Response.Redirect();
+
                         return View("~/Views/Marketing/Social/Facebook/Queue.cshtml");
                     }
 

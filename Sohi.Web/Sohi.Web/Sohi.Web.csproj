@@ -40,8 +40,6 @@
     <Folder Include="Models\Account\" />
     <Folder Include="Views\Settings\" />
     <Folder Include="Controllers\Api\" />
-    <Folder Include="Views\Websites\" />
-    <Folder Include="Views\Websites\DCProjects\" />
     <Folder Include="Controllers\Marketing\" />
     <Folder Include="Controllers\Marketing\Social\" />
     <Folder Include="Views\Marketing\Social\" />
@@ -49,6 +47,8 @@
     <Folder Include="Views\Marketing\Social\Facebook\" />
     <Folder Include="ViewModels\Social\" />
     <Folder Include="ViewModels\Social\Facebook\" />
+    <Folder Include="Views\Website\" />
+    <Folder Include="Models\Azure\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
@@ -59,6 +59,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.4" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.1" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\facebook.png" />
