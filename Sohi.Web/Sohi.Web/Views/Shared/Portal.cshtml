@@ -37,12 +37,18 @@
          ul li a {
             color: black !important;
         }
+        #sidebarMenu h6 {
+            padding-left: 20px!important;
+            font-size: 1.3rem;
+        }
+
 
         #sidebarMenu ul li a {
             font-size: 14px;
             display: block;
             color: #fff;
             font-family: Roboto, sans-serif;
+            padding-left: 20px;
         }
 
             #sidebarMenu ul li a:hover {
@@ -132,10 +138,17 @@
                                         Dashboard
                                     </a>
                                 </li>
+                            </ul>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-1 text-muted">
+                                <span>Marketing</span>
+                            </h6>
+                            <ul class="nav flex-column">
+
+
                                 <li class="nav-item" id="marketing">
                                     <a class="nav-link" asp-controller="Connect" asp-action="Index">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                        Marketing
+                                        Social Marketing
                                     </a>
                                 </li>
 
@@ -145,6 +158,11 @@
                                         Email Marketing
                                     </a>
                                 </li>
+                            </ul>
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-1 text-muted">
+                                <span>People</span>
+                            </h6>
+                            <ul class="nav flex-column">
 
                                 <li class="nav-item" id="leads">
                                     <a class="nav-link" asp-controller="Leads" asp-action="Index">
@@ -161,9 +179,8 @@
 
                             </ul>
 
-                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-1 text-muted">
                                 <span>Settings</span>
-
                             </h6>
                             <ul class="nav flex-column mb-2">
                                 <li class="nav-item" id="settings">
@@ -179,12 +196,12 @@
                                     </a>
                                 </li>
                                 @*<li class="nav-item">
-                                        <form method="post" asp-action="logout" asp-controller="account">
-                                            <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
-                                                Logout @User.Identity.Name
-                                            </button>
-                                        </form>
-                                    </li>*@
+                <form method="post" asp-action="logout" asp-controller="account">
+                    <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                        Logout @User.Identity.Name
+                    </button>
+                </form>
+            </li>*@
 
                             </ul>
                         </div>

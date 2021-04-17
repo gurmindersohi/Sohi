@@ -344,6 +344,13 @@
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Privacy.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/About.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Contact.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Features.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Home.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Index.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Pricing.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Services.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DCProjects/Home.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DCProjects/Index.cshtml.g.cs
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/_ViewImports.cshtml.g.cs
@@ -356,10 +363,3 @@
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/ref/Sohi.Websites.dll
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Sohi.Websites.pdb
 /Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Sohi.Websites.genruntimeconfig.cache
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Index.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Pricing.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Services.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/About.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Contact.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Features.cshtml.g.cs
-/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/Debug/net5.0/Razor/Pages/Websites/DC/Home.cshtml.g.cs

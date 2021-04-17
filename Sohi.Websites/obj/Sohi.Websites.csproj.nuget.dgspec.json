@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj": {}
+    "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj": {
+    "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj",
+        "projectUniqueName": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj",
         "projectName": "Sohi.Websites",
-        "projectPath": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\Sohi.Websites.csproj",
-        "packagesPath": "C:\\Users\\gurmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gurmi\\source\\repos\\Sohi\\Sohi.Websites\\obj\\",
+        "projectPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/Sohi.Websites.csproj",
+        "packagesPath": "/Users/gurmindersingh/.nuget/packages/",
+        "outputPath": "/Users/gurmindersingh/Projects/Sohi/Sohi.Websites/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gurmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/gurmindersingh/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
