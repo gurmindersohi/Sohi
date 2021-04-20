@@ -142,6 +142,21 @@ namespace Sohi.Web.Models.SocialMedia
             List<SocialMedia> accounts = new List<SocialMedia>();
 
             accounts = context.SocialMediaAccounts.Where(a => a.AccountId == accountid).ToList();
+
+
+            return accounts;
+
+        }
+
+        public SocialMedia GetTokenByPlatformAsync(string accountid, string platform)
+        {
+            Guid id = new Guid(accountid);
+
+            SocialMedia accounts = new SocialMedia();
+
+            accounts = context.SocialMediaAccounts.Where(a => a.AccountId == accountid && a.Type == platform).FirstOrDefault();
+
+
             return accounts;
 
 
@@ -254,9 +269,9 @@ namespace Sohi.Web.Models.SocialMedia
             }
         }
 
-        public async Task<List<PostsViewModel>> GetFacebookPosts(string pageid, string pagetoken)
+        public async Task<List<Post>> GetFacebookPosts(string pageid, string pagetoken)
         {
-            List<PostsViewModel> posts = new List<PostsViewModel>();
+            List<Post> posts = new List<Post>();
 
             string version = _config.GetSection("FacebookApp").GetSection("version").Value;
 
@@ -271,7 +286,7 @@ namespace Sohi.Web.Models.SocialMedia
 
                 foreach (var item in parsedobj["data"])
                 {
-                    PostsViewModel post = new PostsViewModel();
+                    Post post = new Post();
 
                     post.Id = item["id"].ToString();
                     post.Picture = item["full_picture"].ToString();

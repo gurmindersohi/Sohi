@@ -1453,3 +1453,5 @@ C:/Users/gurmi/source/repos/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Sohi.Web.gen
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Sohi.Web.genruntimeconfig.cache
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Sohi.Web.csprojAssemblyReference.cache
 /Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Shared/_Master.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Instagram/_Common.cshtml.g.cs
+/Users/gurmindersingh/Projects/Sohi/Sohi.Web/Sohi.Web/obj/Debug/net5.0/Razor/Views/Marketing/Social/Facebook/Analytics.cshtml.g.cs

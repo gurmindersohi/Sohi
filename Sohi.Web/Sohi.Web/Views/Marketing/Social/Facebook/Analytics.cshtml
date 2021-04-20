@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = "~/Views/Marketing/Social/Facebook/_Common.cshtml";
+}
+
+<h1>Analytics</h1>
+
+
+
+
+
+<script>$(document).ready(function () {
+    $("#analytics").addClass("active");
+    $("#facebook").addClass("active");
+        $("#marketing").addClass("active");
+    });
+    $('.nav li').click(function () {
+        $(this).toggleClass('active').siblings().removeClass('active');
+    });</script>
+
+<style>
+    .form-switch .form-check-input {
+        width: 2.5em !important;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    .form-check-input {
+        height: 1.5em !important;
+    }
+
+    .form-check-label {
+        color: #1c1e21;
+        font-weight: 600;
+    }
+
+    .modal-title {
+        width: 100%;
+        color: #1c1e21;
+        font-weight: 600;
+        font-family: inherit;
+    }
+</style>

@@ -43,45 +43,127 @@ namespace Sohi.Web.Controllers.Marketing.Social
         }
 
         [Route("Queue")]
-        public IActionResult Queue()
+        public async Task<IActionResult> QueueAsync()
         {
-            return View("~/Views/Marketing/Social/Facebook/Queue.cshtml");
+            try
+            {
+                List<Profile> profiles = new List<Profile>();
+
+                SocialMedia socialMedia = await GetTokenByPlatformAsync();
+
+                if (socialMedia != null)
+                {
+                    profiles = await GetFacebookPages(socialMedia.AccessToken);
+                }
+
+
+                PostsViewModel postsViewModel = new PostsViewModel()
+                {
+
+                    profiles = profiles
+
+                };
+
+
+
+                return View("~/Views/Marketing/Social/Facebook/Queue.cshtml", postsViewModel);
+            }
+            catch (Exception ex)
+            {
+
+                return View("~/Views/Marketing/Social/Facebook/Queue.cshtml");
+            }
+
         }
+
 
 
         [Route("Posts")]
         public async Task<IActionResult> PostsAsync()
         {
-
-            List<SocialMedia> socialMedia = await GetTokenAsync();
-
-
-            List<PostsViewModel> posts = new List<PostsViewModel>();
-
-            if (socialMedia != null)
+            try
             {
-                foreach (var account in socialMedia)
+                List<Profile> profiles = new List<Profile>();
+                List<Post> posts = new List<Post>();
+
+                SocialMedia socialMedia = await GetTokenByPlatformAsync();
+
+                if (socialMedia != null)
                 {
-                    if (account.Type == "Facebook")
-                    {
-                        await GetFacebookPages(account.AccessToken);
-                        string pageid = "102420827994118";
-                        var pagetoken = await _socialMediaRepository.GenerateFacebookPageTokenAsync(pageid, account.AccessToken);
-
-                        posts = await GetFacebookPosts(pageid, pagetoken);
-
-                    }
+                    profiles = await GetFacebookPages(socialMedia.AccessToken);
                 }
 
+                string pageid = "102420827994118";
+
+                var pagetoken = await _socialMediaRepository.GenerateFacebookPageTokenAsync(pageid, socialMedia.AccessToken);
+
+                if (pagetoken != null)
+                {
+                    posts = await GetFacebookPosts(pageid, pagetoken);
+                }
+
+
+                PostsViewModel postsViewModel = new PostsViewModel()
+                {
+
+                    posts = posts,
+                    profiles = profiles
+
+                };
+
+
+
+                return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", postsViewModel);
             }
-            else
+            catch (Exception ex)
             {
-                string abc = "error";
+
+                return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", null);
             }
-
-
-            return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", posts);
         }
+
+        //[Route("Posts")]
+        //public async Task<IActionResult> PostsAsync()
+        //{
+        //    try
+        //    {
+        //        List<Profile> profiles = new List<Profile>();
+        //        List<Post> posts = new List<Post>();
+
+        //        SocialMedia socialMedia = await GetTokenByPlatformAsync();
+
+        //        if (socialMedia != null)
+        //        {
+        //            profiles = await GetFacebookPages(socialMedia.AccessToken);
+        //        }
+
+        //        string pageid = "102420827994118";
+
+        //        var pagetoken = await _socialMediaRepository.GenerateFacebookPageTokenAsync(pageid, socialMedia.AccessToken);
+
+        //        if (pagetoken != null)
+        //        {
+        //            posts = await GetFacebookPosts(pageid, pagetoken);
+        //        }
+
+
+        //        PostsViewModel postsViewModel = new PostsViewModel() {
+
+        //            posts = posts,
+        //            profiles = profiles
+
+        //        };
+
+
+
+        //        return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", postsViewModel);
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return View("~/Views/Marketing/Social/Facebook/Posts.cshtml", null);
+        //    }
+        //}
 
         [HttpGet]
         public async Task<List<SocialMedia>> GetTokenAsync()
@@ -100,10 +182,28 @@ namespace Sohi.Web.Controllers.Marketing.Social
         }
 
         [HttpGet]
-        public async Task<List<PostsViewModel>> GetFacebookPosts(string pageid, string pagetoken)
+        public async Task<SocialMedia> GetTokenByPlatformAsync()
+        {
+            SocialMedia acc = new SocialMedia();
+
+            var user = await userManager.GetUserAsync(User);
+
+            string platform = "Facebook";
+
+            if (user != null)
+            {
+                acc = _socialMediaRepository.GetTokenByPlatformAsync(user.AccountId, platform);
+            }
+
+            return acc;
+
+        }
+
+        [HttpGet]
+        public async Task<List<Post>> GetFacebookPosts(string pageid, string pagetoken)
         {
 
-            List<PostsViewModel> posts = posts = await _socialMediaRepository.GetFacebookPosts(pageid, pagetoken);
+            List<Post> posts = posts = await _socialMediaRepository.GetFacebookPosts(pageid, pagetoken);
 
             return posts;
 
@@ -147,6 +247,16 @@ namespace Sohi.Web.Controllers.Marketing.Social
 
         //    return View("~/Views/Marketing/Social/Facebook/Posts.cshtml");
         //}
+
+
+
+        [Route("Analytics")]
+        public IActionResult Analytics()
+        {
+            return View("~/Views/Marketing/Social/Facebook/Analytics.cshtml");
+        }
+
+
 
     }
 }

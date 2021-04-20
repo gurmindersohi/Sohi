@@ -1,14 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using Sohi.Web.Models.SocialMedia;
+
 namespace Sohi.Web.ViewModels.Social.Facebook
 {
     public class PostsViewModel
     {
-        public string Id { get; set; }
+        public List<Post> posts { get; set; }
 
-        public string Description { get; set; }
-
-        public string Picture { get; set; }
-
-        public string CreatedTime { get; set; }
+        public List<Profile> profiles { get; set; }
     }
 }

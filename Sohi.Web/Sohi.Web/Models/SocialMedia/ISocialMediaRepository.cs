@@ -20,6 +20,8 @@ namespace Sohi.Web.Models.SocialMedia
 
         List<SocialMedia> GetTokenAsync(string accountid);
 
+        SocialMedia GetTokenByPlatformAsync(string accountid, string platform);
+
 
         Task<Profile> GetInstagramAccountAsync(string accesstoken);
 
@@ -32,7 +34,7 @@ namespace Sohi.Web.Models.SocialMedia
 
         Task<string> GenerateFacebookPageTokenAsync(string pageid, string pagetoken);
 
-        Task<List<PostsViewModel>> GetFacebookPosts(string PageId, string PageToken);
+        Task<List<Post>> GetFacebookPosts(string PageId, string PageToken);
 
         Task<List<Profile>> GetFacebookPages(string accesstoken);
 

@@ -1,27 +1,19 @@
-﻿<Properties StartupConfiguration="{5E802A19-6405-4791-88A8-CF40DFDD1762}|Default" MonoDevelop.Ide.FileNesting.Enabled="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml">
-    <Files>
-      <File FileName="Sohi.Web/Sohi.Web/Views/Marketing/Social/Facebook/_Common.cshtml" Line="76" Column="42" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/_Master.cshtml" Line="144" Column="60" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Settings.cshtml" Line="57" Column="23" />
-      <File FileName="Sohi.Web/Sohi.Web/Views/Shared/Portal.cshtml" Line="1" Column="1" />
-    </Files>
+﻿<Properties StartupConfiguration="Multiple Projects" MonoDevelop.Ide.FileNesting.Enabled="True">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Sohi" expanded="True">
             <Node name="Sohi.Web" expanded="True">
               <Node name="Sohi.Web" expanded="True">
-                <Node name="Views" expanded="True">
-                  <Node name="Home" expanded="True" />
+                <Node name="Controllers" expanded="True">
                   <Node name="Marketing" expanded="True">
-                    <Node name="Social" expanded="True">
-                      <Node name="Facebook" expanded="True" />
-                    </Node>
+                    <Node name="Social" expanded="True" />
                   </Node>
-                  <Node name="Shared" expanded="True">
-                    <Node name="Portal.cshtml" selected="True" />
-                  </Node>
+                  <Node name="AccountController.cs" selected="True" />
+                </Node>
+                <Node name="Models" expanded="True">
+                  <Node name="SocialMedia" expanded="True" />
                 </Node>
               </Node>
             </Node>
